@@ -1,0 +1,294 @@
+{
+  "datasets_screened": {
+    "value": 114,
+    "source": "data/corpus.json + dataset-audit-final.json + effect-recipes.json",
+    "transformation": "count unique retained entities",
+    "kind": "measured"
+  },
+  "datasets_used": {
+    "value": 111,
+    "source": "data/corpus.json + dataset-audit-final.json + effect-recipes.json",
+    "transformation": "count unique retained entities",
+    "kind": "measured"
+  },
+  "effect_definitions": {
+    "value": 223,
+    "source": "data/corpus.json + dataset-audit-final.json + effect-recipes.json",
+    "transformation": "count unique retained entities",
+    "kind": "measured"
+  },
+  "configurations": {
+    "value": 1742,
+    "source": "data/corpus.json + dataset-audit-final.json + effect-recipes.json",
+    "transformation": "count unique retained entities",
+    "kind": "measured"
+  },
+  "model_checks": {
+    "value": 34840,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum model",
+    "kind": "measured"
+  },
+  "model_passed": {
+    "value": 34818,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum model",
+    "kind": "measured"
+  },
+  "model_before_passed": {
+    "value": 29805,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum model",
+    "kind": "measured"
+  },
+  "bubble_checks": {
+    "value": 87000,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum bubble",
+    "kind": "measured"
+  },
+  "bubble_passed": {
+    "value": 86986,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum bubble",
+    "kind": "measured"
+  },
+  "bubble_before_passed": {
+    "value": 77272,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum bubble",
+    "kind": "measured"
+  },
+  "permutation_checks": {
+    "value": 1095,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum exact permutation",
+    "kind": "measured"
+  },
+  "permutation_passed": {
+    "value": 1095,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum exact permutation",
+    "kind": "measured"
+  },
+  "permutation_before_passed": {
+    "value": 1094,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum exact permutation",
+    "kind": "measured"
+  },
+  "structural_checks": {
+    "value": 6968,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum structural",
+    "kind": "measured"
+  },
+  "structural_passed": {
+    "value": 6968,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum structural",
+    "kind": "measured"
+  },
+  "structural_before_passed": {
+    "value": 6968,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum structural",
+    "kind": "measured"
+  },
+  "checks": {
+    "value": 129903,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum non-LS total",
+    "kind": "measured"
+  },
+  "passed": {
+    "value": 129867,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum non-LS total",
+    "kind": "measured"
+  },
+  "before_passed": {
+    "value": 115139,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum non-LS total",
+    "kind": "measured"
+  },
+  "LS_checks": {
+    "value": 91515,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum LS experimental",
+    "kind": "measured"
+  },
+  "LS_passed": {
+    "value": 82680,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum LS experimental",
+    "kind": "measured"
+  },
+  "LS_before_passed": {
+    "value": 82641,
+    "source": "corpus + reference + before/after app evidence",
+    "transformation": "strict per-check comparison; sum LS experimental",
+    "kind": "measured"
+  },
+  "LS_alpha_passed": {
+    "value": 1893,
+    "source": "recomputed LS_alpha checks",
+    "transformation": "sum passed",
+    "kind": "measured"
+  },
+  "LS_alpha_checks": {
+    "value": 3280,
+    "source": "recomputed LS_alpha checks",
+    "transformation": "count",
+    "kind": "measured"
+  },
+  "permutation_configurations": {
+    "value": 365,
+    "source": "results/permutation.json",
+    "transformation": "unique IDs",
+    "kind": "measured"
+  },
+  "documented_checks": {
+    "value": 36,
+    "source": "recomputed non-LS failures",
+    "transformation": "count or extrema",
+    "kind": "measured"
+  },
+  "documented_configurations": {
+    "value": 14,
+    "source": "recomputed non-LS failures",
+    "transformation": "count or extrema",
+    "kind": "measured"
+  },
+  "year_configurations": {
+    "value": 8,
+    "source": "recomputed non-LS failures",
+    "transformation": "count or extrema",
+    "kind": "measured"
+  },
+  "difference_min": {
+    "value": 1.0152779929633274e-09,
+    "source": "recomputed non-LS failures",
+    "transformation": "count or extrema",
+    "kind": "measured"
+  },
+  "difference_max": {
+    "value": 1.082748870809274e-07,
+    "source": "recomputed non-LS failures",
+    "transformation": "count or extrema",
+    "kind": "measured"
+  },
+  "centered_max": {
+    "value": 2.9903080012161354e-11,
+    "source": "centered-reference.jsonl + patched-app.json",
+    "transformation": "maximum across all recorded centered diagnostics",
+    "kind": "measured"
+  },
+  "usecase_slope": {
+    "value": -0.028564525894406115,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.beta",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_ci_lower": {
+    "value": -0.048527876999106725,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.ci_lb",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_ci_upper": {
+    "value": -0.008601174789705502,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.ci_ub",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_slope_p": {
+    "value": 0.009254120547106337,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.p",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_tau2": {
+    "value": 0.1421319414727592,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.tau2",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_R2_percent": {
+    "value": 55.314039953531044,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.R2",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_QE": {
+    "value": 30.733090010749258,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.QE",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_df": {
+    "value": 11,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.df",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "usecase_QE_p": {
+    "value": 0.001214290987420037,
+    "source": "results/reference.json: dat.bcg/e1/ablat.main.QE_p",
+    "transformation": "select and scale",
+    "kind": "measured"
+  },
+  "version_R": {
+    "value": "R version 4.6.0 (2026-04-24 ucrt)",
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "version_metafor": {
+    "value": "5.2.1",
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "version_metadat": {
+    "value": "1.6.0",
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "version_test": {
+    "value": "adhoc",
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "version_method": {
+    "value": "PM",
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "version_pm_control": {
+    "value": {
+      "threshold": 1e-12,
+      "tol": 1e-12,
+      "maxiter": 1000
+    },
+    "source": "results/versions.json",
+    "transformation": "identity",
+    "kind": "source metadata"
+  },
+  "commit": {
+    "value": "e47acf19f13d36feac52fc414d3c9782012155cc",
+    "source": "results/provenance.json",
+    "transformation": "identity",
+    "kind": "static source provenance"
+  },
+  "pull_request": {
+    "value": 89,
+    "source": "results/provenance.json",
+    "transformation": "identity",
+    "kind": "static source provenance"
+  }
+}

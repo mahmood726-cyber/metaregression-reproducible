@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite this validation archive when using these results."
+title: "Random-effects meta-regression in the browser: validation against the R package metafor"
+type: software
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+version: 1.0.0
+license: MIT
+references:
+  - type: software
+    title: allmeta
+    authors:
+      - family-names: Ahmad
+        given-names: Mahmood
+    url: https://github.com/mahmood726-cyber/allmeta
+    notes: "isDerivedFrom; validated source commit e47acf19f13d36feac52fc414d3c9782012155cc (PR #89)"
+  - type: software
+    title: allmeta
+    authors:
+      - family-names: Ahmad
+        given-names: Mahmood
+    version: 1.2.1
+    doi: 10.5281/zenodo.23288388
+    notes: isDerivedFrom

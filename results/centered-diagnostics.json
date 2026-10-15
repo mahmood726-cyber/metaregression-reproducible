@@ -1,0 +1,72 @@
+{
+  "beta": {
+    "checks": 28,
+    "passing": 28,
+    "max_difference": 1.7171249542621224e-14
+  },
+  "se": {
+    "checks": 28,
+    "passing": 28,
+    "max_difference": 3.931235639314816e-15
+  },
+  "ci_lb": {
+    "checks": 28,
+    "passing": 28,
+    "max_difference": 4.0079388907633203e-13
+  },
+  "ci_ub": {
+    "checks": 28,
+    "passing": 28,
+    "max_difference": 1.3589129821411916e-13
+  },
+  "tau2": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 4.360169940866665e-16
+  },
+  "R2": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 2.9903080012161354e-11
+  },
+  "QE": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 1.699786532313753e-14
+  },
+  "QE_p": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 5.064171304525189e-12
+  },
+  "q": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 1.0724754417877857e-13
+  },
+  "pred": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 1.3118553517193106e-13
+  },
+  "pred_se": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 8.743006318923108e-14
+  },
+  "pi_lb": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 6.156337242032717e-13
+  },
+  "pi_ub": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 6.09512440519211e-14
+  },
+  "slope_t": {
+    "checks": 14,
+    "passing": 14,
+    "max_difference": 1.839728280330822e-12
+  }
+}

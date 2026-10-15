@@ -1,0 +1,134 @@
+{
+  "datasets_screened": {
+    "value": 114
+  },
+  "datasets_used": {
+    "value": 111
+  },
+  "effect_definitions": {
+    "value": 223
+  },
+  "configurations": {
+    "value": 1742
+  },
+  "checks": {
+    "value": 129903
+  },
+  "passed": {
+    "value": 129867
+  },
+  "before_passed": {
+    "value": 115139
+  },
+  "model_checks": {
+    "value": 34840
+  },
+  "model_passed": {
+    "value": 34818
+  },
+  "bubble_checks": {
+    "value": 87000
+  },
+  "bubble_passed": {
+    "value": 86986
+  },
+  "permutation_checks": {
+    "value": 1095
+  },
+  "permutation_passed": {
+    "value": 1095
+  },
+  "structural_checks": {
+    "value": 6968
+  },
+  "structural_passed": {
+    "value": 6968
+  },
+  "permutation_configurations": {
+    "value": 365
+  },
+  "documented_checks": {
+    "value": 36
+  },
+  "documented_configurations": {
+    "value": 14
+  },
+  "year_configurations": {
+    "value": 8
+  },
+  "LS_checks": {
+    "value": 91515
+  },
+  "LS_passed": {
+    "value": 82680
+  },
+  "LS_alpha_checks": {
+    "value": 3280
+  },
+  "LS_alpha_passed": {
+    "value": 1893
+  },
+  "version_R": {
+    "value": "R version 4.6.0 (2026-04-24 ucrt)"
+  },
+  "version_metafor": {
+    "value": "5.2.1"
+  },
+  "version_metadat": {
+    "value": "1.6.0"
+  },
+  "commit": {
+    "value": "e47acf19f13d36feac52fc414d3c9782012155cc"
+  },
+  "pull_request": {
+    "value": 89
+  },
+  "usecase_slope": {
+    "value": -0.0286,
+    "digits": 4
+  },
+  "usecase_ci_lower": {
+    "value": -0.0485,
+    "digits": 4
+  },
+  "usecase_ci_upper": {
+    "value": -0.0086,
+    "digits": 4
+  },
+  "usecase_slope_p": {
+    "value": 0.009,
+    "digits": 3
+  },
+  "usecase_tau2": {
+    "value": 0.142,
+    "digits": 3
+  },
+  "usecase_R2_percent": {
+    "value": 55.3,
+    "digits": 1
+  },
+  "usecase_QE": {
+    "value": 30.73,
+    "digits": 2
+  },
+  "usecase_df": {
+    "value": 11,
+    "digits": 0
+  },
+  "usecase_QE_p": {
+    "value": 0.001,
+    "digits": 3
+  },
+  "difference_min": {
+    "value": 1e-09,
+    "significant": 2
+  },
+  "difference_max": {
+    "value": 1.1e-07,
+    "significant": 2
+  },
+  "centered_max": {
+    "value": 3e-11,
+    "significant": 1
+  }
+}

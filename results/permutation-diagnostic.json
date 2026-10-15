@@ -1,0 +1,49 @@
+{
+  "id": "dat.hart1999/e1/year",
+  "original": {
+    "p": 0.39166666666666666,
+    "tObs": -0.6742357554679,
+    "nperm": 720,
+    "exact": true
+  },
+  "patched": {
+    "p": 0.39444444444444443,
+    "tObs": -0.6742357554506776,
+    "nperm": 720,
+    "exact": true
+  },
+  "changed_classifications": [
+    {
+      "moderators": [
+        1993,
+        1991,
+        1992,
+        1991,
+        1990,
+        1989
+      ],
+      "original_t": 0.6742357551379031,
+      "patched_t": 0.6742357554506775,
+      "original_distance_from_observed": -3.299969186798535e-10,
+      "patched_distance_from_observed": -1.1102230246251565e-16,
+      "original_counted": false,
+      "patched_counted": true
+    },
+    {
+      "moderators": [
+        1993,
+        1991,
+        1992,
+        1991,
+        1990,
+        1989
+      ],
+      "original_t": 0.6742357551379031,
+      "patched_t": 0.6742357554506775,
+      "original_distance_from_observed": -3.299969186798535e-10,
+      "patched_distance_from_observed": -1.1102230246251565e-16,
+      "original_counted": false,
+      "patched_counted": true
+    }
+  ]
+}

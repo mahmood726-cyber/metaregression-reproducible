@@ -1,0 +1,182 @@
+[
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "QE_p",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "pred",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "pi_lb",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_line",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_ci",
+    "index": 0
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_ci",
+    "index": 1
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_line",
+    "index": 1
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_ci",
+    "index": 2
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_ci",
+    "index": 3
+  },
+  {
+    "configuration": "dat.anand1999/e5/year",
+    "quantity": "bubble_line",
+    "index": 2
+  },
+  {
+    "configuration": "dat.anker2025/e4/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/hsame",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/hsame",
+    "quantity": "slope_t",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/hdiff",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/tsame",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/tdiff",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/tdiff",
+    "quantity": "q",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/same",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.bartos2023/e4/flips",
+    "quantity": "R2",
+    "index": 0
+  },
+  {
+    "configuration": "dat.egger2001/e1/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.egger2001/e1/year",
+    "quantity": "QE_p",
+    "index": 0
+  },
+  {
+    "configuration": "dat.gibson2002/e2/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.gibson2002/e4/year",
+    "quantity": "beta",
+    "index": 0
+  },
+  {
+    "configuration": "dat.li2007/e2/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.obrien2003/e2/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "QE",
+    "index": 0
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "pred",
+    "index": 0
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "pi_lb",
+    "index": 0
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_ci",
+    "index": 1
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_line",
+    "index": 1
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_ci",
+    "index": 2
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_ci",
+    "index": 3
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_line",
+    "index": 2
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_ci",
+    "index": 4
+  },
+  {
+    "configuration": "dat.obrien2003/e4/year",
+    "quantity": "bubble_ci",
+    "index": 5
+  }
+]

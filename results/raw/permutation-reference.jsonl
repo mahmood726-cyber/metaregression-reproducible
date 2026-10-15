@@ -1,0 +1,15 @@
+{"id":"dat.aloe2013/e1/n","result":{"p":0.041666666666666664,"QM_p":0.041666666666666664,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e1/tval","result":{"p":0.016666666666666666,"QM_p":0.016666666666666666,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e1/preds","result":{"p":0.050000000000000003,"QM_p":0.050000000000000003,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e1/R2","result":{"p":0.31666666666666665,"QM_p":0.31666666666666665,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e2/n","result":{"p":0.058333333333333334,"QM_p":0.058333333333333334,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e2/tval","result":{"p":0.016666666666666666,"QM_p":0.016666666666666666,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e2/preds","result":{"p":0.050000000000000003,"QM_p":0.050000000000000003,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e2/R2","result":{"p":0.31666666666666665,"QM_p":0.31666666666666665,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e3/n","result":{"p":0.066666666666666666,"QM_p":0.066666666666666666,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e3/tval","result":{"p":0.0083333333333333332,"QM_p":0.0083333333333333332,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e3/preds","result":{"p":0.033333333333333333,"QM_p":0.033333333333333333,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.aloe2013/e3/R2","result":{"p":0.43333333333333335,"QM_p":0.43333333333333335,"exact":120,"iter":null},"warnings":[]}
+{"id":"dat.anand1999/e2/year","result":{"p":0.09166666666666666,"QM_p":0.09166666666666666,"exact":2520,"iter":null},"warnings":[]}
+{"id":"dat.anand1999/e2/ai","result":{"p":0.5357142857142857,"QM_p":0.5357142857142857,"exact":1260,"iter":null},"warnings":[]}
+{"id":"dat.anand1999/e2/n1i","result":{"p":0.98452380952380958,"QM_p":0.98452380952380958,"exact":5040,"iter":null},"warnings":[]}

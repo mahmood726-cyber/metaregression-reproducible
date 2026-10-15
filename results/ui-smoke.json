@@ -1,0 +1,43 @@
+[
+  {
+    "name": "k=3 computation and plot",
+    "pass": true,
+    "actual": {
+      "k": 3,
+      "fit": true,
+      "ls": false,
+      "perm": null,
+      "bubbles": 3
+    }
+  },
+  {
+    "name": "k=4 computation and plot",
+    "pass": true,
+    "actual": {
+      "k": 4,
+      "fit": true,
+      "ls": true,
+      "perm": {
+        "p": 0.9583333333333334,
+        "tObs": -0.5947204161817574,
+        "nperm": 24,
+        "exact": true
+      },
+      "bubbles": 4
+    }
+  },
+  {
+    "name": "k=2 refusal clears results",
+    "pass": true,
+    "actual": {
+      "fit": null,
+      "pi": null,
+      "perm": null
+    }
+  },
+  {
+    "name": "no page errors",
+    "pass": true,
+    "actual": []
+  }
+]

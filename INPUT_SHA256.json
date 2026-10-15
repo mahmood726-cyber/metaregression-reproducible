@@ -1,0 +1,8 @@
+{
+  "data/corpus.json": "2fa322423a7db9260c445f3b1792d91fd636ce91aa4223c789cbdec0b0918383",
+  "results/patched-app.json": "d3967555f1e04000fa3e34efc4efa585871a43a82bbc67a5e15ff5a69316bfef",
+  "expected/documented_differences.json": "88907ef4e362482246db9395105ce082ebcfbbdff5de4104a553470409a94f7c",
+  "expected/quantity_coverage.json": "4c34aa9f5537ade5fbeb7d776681a6cf8529f13d97b52d658427b7afd5985092",
+  "bench/refit_worker.R": "3f43dc108e6567e5117000d60d2279e3f119e80b04b3f7025a2b6f5a5d5dc0b3",
+  "bench/compare_ls.R": "640e686f8ae437dbf4b351c62e339f036a83d4a7aef5845213a0083cce59eaff"
+}

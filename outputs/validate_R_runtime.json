@@ -1,0 +1,9 @@
+{
+  "seconds": 3266.02,
+  "R": "R version 4.6.0 (2026-04-24 ucrt)",
+  "metafor": "5.2.1",
+  "main_fits": 1742,
+  "exact_permutations": 365,
+  "LS": "fresh experimental fits, excluded from primary verdict",
+  "workers": 3
+}

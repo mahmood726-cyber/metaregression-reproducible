@@ -1,0 +1,2938 @@
+{
+  "dat.aloe2013": {
+    "dataset": "dat.aloe2013",
+    "configurations": 12,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.aloe2013",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PCOR\", ti = tval, ni = n, mi = preds, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZPCOR\", ti = tval, ni = n, mi = preds, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"SPCOR\", ti = tval, ni = n, mi = preds, r2i = R2, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.anand1999": {
+    "dataset": "dat.anand1999",
+    "configurations": 32,
+    "effects": 6,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.anand1999",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 32
+  },
+  "dat.anker2025": {
+    "dataset": "dat.anker2025",
+    "configurations": 80,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "HN05 <- function(t) {     dhalfnormal(t, scale = 0.5) }",
+        "error": null
+      },
+      {
+        "code": "es.primary <- escalc(measure = \"IRR\", yi = total.logrr, sei = total.se, ni = total.n, slab = study, data = dat.anker2025)",
+        "error": null
+      },
+      {
+        "code": "es.sex <- escalc(measure = \"GEN\", yi = sex.logrrr, sei = sex.se, ni = total.n, slab = study, data = dat.anker2025)",
+        "error": null
+      },
+      {
+        "code": "es.female <- escalc(measure = \"IRR\", yi = female.logrr, sei = female.se, ni = female.n, slab = study, data = dat.anker2025)",
+        "error": null
+      },
+      {
+        "code": "es.male <- escalc(measure = \"IRR\", yi = male.logrr, sei = male.se, ni = male.n, slab = study, data = dat.anker2025)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 80
+  },
+  "dat.assink2016": {
+    "dataset": "dat.assink2016",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.assink2016",
+        "error": null
+      },
+      {
+        "code": "dat$deltype <- relevel(factor(dat$deltype), ref = \"general\")",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, obs = esid, data = dat, rho = 0.6)",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, type = deltype, obs = esid, data = dat, rho = c(0.7, 0.5))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 2
+  },
+  "dat.axfors2021": {
+    "dataset": "dat.axfors2021",
+    "configurations": 12,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.axfors2021",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = hcq_arm_event, n1i = hcq_arm_total, ci = control_arm_event, n2i = control_arm_total, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.bakdash2021": {
+    "dataset": "dat.bakdash2021",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bakdash2021",
+        "error": null
+      },
+      {
+        "code": "res.overall.crve <- robust(res.overall, cluster = SampleID)",
+        "error": "object 'res.overall' not found"
+      },
+      {
+        "code": "res.sa.crve <- robust(res.sa, cluster = SampleID)",
+        "error": "object 'res.sa' not found"
+      },
+      {
+        "code": "all.z <- c(res.sa.crve$beta, res.overall.crve$beta, res.overall.crve$beta)",
+        "error": "object 'res.sa.crve' not found"
+      },
+      {
+        "code": "all.ci.lower <- c(res.sa.crve$ci.lb, res.overall.crve.pred$ci.lb, res.overall.crve.pred$pi.lb)",
+        "error": "object 'res.sa.crve' not found"
+      },
+      {
+        "code": "all.ci.upper <- c(res.sa.crve$ci.ub, res.overall.crve.pred$ci.ub, res.overall.crve.pred$pi.ub)",
+        "error": "object 'res.sa.crve' not found"
+      },
+      {
+        "code": "all.pvals <- c(res.sa.crve$pval, res.overall.crve$pval)",
+        "error": "object 'res.sa.crve' not found"
+      },
+      {
+        "code": "all.labels <- c(sort(unique(dat$SA.measure.type)), \"Overall\", \"95% Prediction Interval\")",
+        "error": null
+      },
+      {
+        "code": "pvals.round <- function(input) {     input <- ifelse(input < 0.001, \"< 0.001\", ifelse(input < 0.01, \"< 0.01\", ifelse(input < 0.05 & input >= 0.045, \"< 0.05\", ifelse(round(input, 2) == 1, \"0.99\", sprintf(\"%.2f\", round(input, 2)))))) }",
+        "error": null
+      },
+      {
+        "code": "all.pvals.rounded <- pvals.round(all.pvals)",
+        "error": "object 'all.pvals' not found"
+      },
+      {
+        "code": "annotext <- apply(output, 1, function(x) {     paste0(\"  \", x[1], \" [\", x[2], \", \", x[3], \"]\") })",
+        "error": "object 'output' not found"
+      },
+      {
+        "code": "sigma1.z <- data.frame(re.CI.variances[[1]][\"random\"])",
+        "error": "object 're.CI.variances' not found"
+      },
+      {
+        "code": "sigma2.z <- data.frame(re.CI.variances[[2]][\"random\"])",
+        "error": "object 're.CI.variances' not found"
+      },
+      {
+        "code": "W <- diag(1/dat$vi.z)",
+        "error": null
+      },
+      {
+        "code": "X <- model.matrix(res.overall)",
+        "error": "object 'res.overall' not found"
+      },
+      {
+        "code": "P <- W - W %*% X %*% solve(t(X) %*% W %*% X) %*% t(X) %*% W",
+        "error": "object 'X' not found"
+      },
+      {
+        "code": "I2 <- 100 * res.overall.alt$tau2/(res.overall.alt$tau2 + (res.overall$k - res.overall$p)/sum(diag(P)))",
+        "error": "object 'res.overall.alt' not found"
+      },
+      {
+        "code": "I2.CI.lb <- 100 * res.overall.alt.tau[1, 2]/(res.overall.alt.tau[1, 2] + (res.overall$k - res.overall$p)/sum(diag(P)))",
+        "error": "object 'res.overall.alt.tau' not found"
+      },
+      {
+        "code": "I2.CI.ub <- 100 * res.overall.alt.tau[1, 3]/(res.overall.alt.tau[1, 3] + (res.overall$k - res.overall$p)/sum(diag(P)))",
+        "error": "object 'res.overall.alt.tau' not found"
+      },
+      {
+        "code": "table.heterogeneity <- data.frame(matrix(ncol = 3, nrow = 4))",
+        "error": null
+      },
+      {
+        "code": "colnames(table.heterogeneity) <- c(\"Parameter Value\", \"Lower 95% CI\", \"Upper 95% CI\")",
+        "error": null
+      },
+      {
+        "code": "rownames(table.heterogeneity) <- c(\"Tau (Total)\", \"Tau1 (Between paper)\", \"Tau2 (Within paper)\", \"I2 (%)\")",
+        "error": null
+      },
+      {
+        "code": "table.heterogeneity[1, ] <- res.overall.alt.tau[2, ]",
+        "error": "object 'res.overall.alt.tau' not found"
+      },
+      {
+        "code": "table.heterogeneity[2, ] <- sigma1.z[2, ]",
+        "error": "object 'sigma1.z' not found"
+      },
+      {
+        "code": "table.heterogeneity[3, ] <- sigma2.z[2, ]",
+        "error": "object 'sigma2.z' not found"
+      },
+      {
+        "code": "table.heterogeneity[4, ] <- c(I2, I2.CI.lb, I2.CI.ub)",
+        "error": "object 'I2' not found"
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.baker2009": {
+    "dataset": "dat.baker2009",
+    "configurations": 13,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treatment, exac, total, studlab = paste(study, year), data = dat.baker2009, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmeta(pw, common = FALSE, ref = \"plac\")",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "cnet <- netcomb(net)",
+        "error": "could not find function \"netcomb\""
+      },
+      {
+        "code": "nb <- netbind(net, cnet, name = c(\"Standard NMA\", \"Additive CNMA\"))",
+        "error": "could not find function \"netbind\""
+      }
+    ],
+    "candidate_configurations": 13
+  },
+  "dat.bangertdrowns2004": {
+    "dataset": "dat.bangertdrowns2004",
+    "configurations": 11,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bangertdrowns2004",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 11
+  },
+  "dat.bartos2023": {
+    "dataset": "dat.bartos2023",
+    "configurations": 30,
+    "effects": 6,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bartos2023",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = same, ni = flips, data = dat, slab = person)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = hdiff + hsame, ni = flips, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- dat.bartos2023",
+        "error": null
+      },
+      {
+        "code": "dat <- dat[rep(1:nrow(dat), each = 2), ]",
+        "error": null
+      },
+      {
+        "code": "rownames(dat) <- NULL",
+        "error": null
+      },
+      {
+        "code": "dat$outcome <- c(\"heads\", \"same\")",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = hsame + hdiff, ni = flips, data = dat, include = outcome == \"heads\")",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = hsame + tsame, ni = flips, data = dat, include = outcome == \"same\")",
+        "error": null
+      },
+      {
+        "code": "dat$cov <- with(dat, (hsame/flips * (1 - hsame/flips) - hsame/flips * tsame/flips - hsame/flips * hdiff/flips - hdiff/flips * tsame/flips)/flips)",
+        "error": null
+      },
+      {
+        "code": "V <- lapply(split(dat, dat$person), function(x) matrix(c(x$vi[1], x$cov, x$vi[2]), nrow = 2))",
+        "error": null
+      },
+      {
+        "code": "xy <- ellipse(res$G, centre = coef(res), level = 0.95)",
+        "error": "could not find function \"ellipse\""
+      },
+      {
+        "code": "xy <- ellipse(vcov(res), centre = coef(res), level = 0.95)",
+        "error": "could not find function \"ellipse\""
+      }
+    ],
+    "candidate_configurations": 36
+  },
+  "dat.baskerville2012": {
+    "dataset": "dat.baskerville2012",
+    "configurations": 15,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.baskerville2012",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 15
+  },
+  "dat.bassler2004": {
+    "dataset": "dat.bassler2004",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(method.tau = \"DL\", digits = 2)",
+        "error": null
+      },
+      {
+        "code": "mb3 <- metabin(Ee, Ne, Ec, Nc, method = \"I\", data = dat.bassler2004, studlab = study)",
+        "error": null
+      },
+      {
+        "code": "mb3s <- update(mb3, subgroup = blind, print.subgroup.name = FALSE)",
+        "error": null
+      },
+      {
+        "code": "mb3s.c <- update(mb3s, tau.common = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.bauer2002": {
+    "dataset": "dat.bauer2002",
+    "configurations": 18,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "wmw.prob <- escalc(measure = \"CLES\", yi = wmwstat, sei = stderr, ni = n.total, slab = study, data = dat.bauer2002)",
+        "error": null
+      },
+      {
+        "code": "wmw.logit <- escalc(measure = \"PLO\", yi = log(wmwstat/(1 - wmwstat)), sei = stderr/(wmwstat * (1 - wmwstat)), ni = n.total, slab = study, data = dat.bauer2002)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 18
+  },
+  "dat.bcg": {
+    "dataset": "dat.bcg",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bcg",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = tpos, bi = tneg, ci = cpos, di = cneg, data = dat, slab = paste0(author, \", \", year))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.begg1989": {
+    "dataset": "dat.begg1989",
+    "configurations": 1,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.begg1989",
+        "error": null
+      },
+      {
+        "code": "dat$trt <- relevel(factor(dat$trt), ref = \"CMO\")",
+        "error": null
+      },
+      {
+        "code": "dat$arms <- relevel(factor(dat$arms), ref = \"2\")",
+        "error": null
+      },
+      {
+        "code": "dat2 <- data.frame(yi = dat$yi[c(1, 3, 5, 7)] - dat$yi[c(2, 4, 6, 8)], vi = dat$vi[c(1, 3, 5, 7)] + dat$vi[c(2, 4, 6, 8)])",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 1
+  },
+  "dat.berkey1998": {
+    "dataset": "dat.berkey1998",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.berkey1998",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi = 1, cluster = author, rvars = c(v1i, v2i), data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 2
+  },
+  "dat.berkey1998r": {
+    "dataset": "dat.berkey1998r",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [],
+    "candidate_configurations": 2
+  },
+  "dat.besson2016": {
+    "dataset": "dat.besson2016",
+    "configurations": 26,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.besson2016",
+        "error": null
+      },
+      {
+        "code": "dat$sd_c <- with(dat, con_se * sqrt(con_n))",
+        "error": null
+      },
+      {
+        "code": "dat$sd_e <- with(dat, exp_se * sqrt(exp_n))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"SMD\", m1i = exp_mean, m2i = con_mean, sd1i = sd_e, sd2i = sd_c, n1i = exp_n, n2i = con_n, data = dat, add.measure = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 26
+  },
+  "dat.bonett2010": {
+    "dataset": "dat.bonett2010",
+    "configurations": 6,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bonett2010",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.bornmann2007": {
+    "dataset": "dat.bornmann2007",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bornmann2007",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = waward, n1i = wtotal, ci = maward, n2i = mtotal, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.bourassa1996": {
+    "dataset": "dat.bourassa1996",
+    "configurations": 18,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.bourassa1996",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = lh.le, bi = lh.re, ci = rh.le, di = rh.re, data = dat, add = 1/2, to = \"all\")",
+        "error": null
+      },
+      {
+        "code": "dat <- lapply(split(dat, dat$sample), function(x) {     if (nrow(x) == 3L) {         x[-which(x$sex == \"combined\"), ]     }     else {         x     } })",
+        "error": null
+      },
+      {
+        "code": "dat <- do.call(rbind, dat)",
+        "error": null
+      },
+      {
+        "code": "rownames(dat) <- NULL",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 18
+  },
+  "dat.cannon2006": {
+    "dataset": "dat.cannon2006",
+    "configurations": 98,
+    "effects": 7,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.cannon2006",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 98
+  },
+  "dat.chiarito2020": {
+    "dataset": "dat.chiarito2020",
+    "configurations": 95,
+    "effects": 5,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "es.stroke <- escalc(measure = \"OR\", ai = p2y12.stroke, n1i = p2y12.total, ci = aspirin.stroke, n2i = aspirin.total, slab = study, subset = is.finite(p2y12.stroke), data = dat.chiarito2020)",
+        "error": null
+      },
+      {
+        "code": "meta01 <- metabin(event.e = p2y12.stroke, n.e = p2y12.total, event.c = aspirin.stroke, n.c = aspirin.total, studlab = study, data = dat.chiarito2020, subset = is.finite(p2y12.stroke), sm = \"OR\", method.tau = \"PM\", method.random.ci = \"HK\", method = \"Inverse\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 95
+  },
+  "dat.cohen1981": {
+    "dataset": "dat.cohen1981",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.cohen1981",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat[c(1, 4, 5)])",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 2
+  },
+  "dat.colditz1994": {
+    "dataset": "dat.colditz1994",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.colditz1994",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = tpos, bi = tneg, ci = cpos, di = cneg, data = dat, slab = paste0(author, \", \", year))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.collins1985a": {
+    "dataset": "dat.collins1985a",
+    "configurations": 30,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.collins1985a",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 30
+  },
+  "dat.collins1985b": {
+    "dataset": "dat.collins1985b",
+    "configurations": 14,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.collins1985b",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", n1i = pre.nti, n2i = pre.nci, ai = pre.xti, ci = pre.xci, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.craft2003": {
+    "dataset": "dat.craft2003",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.craft2003",
+        "error": null
+      },
+      {
+        "code": "tmp <- rcalc(ri ~ var1 + var2 | study, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "V <- tmp$V",
+        "error": null
+      },
+      {
+        "code": "dat <- tmp$dat",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 2
+  },
+  "dat.crede2010": {
+    "dataset": "dat.crede2010",
+    "configurations": 9,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.crede2010",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.crisafulli2020": {
+    "dataset": "dat.crisafulli2020",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "logp <- escalc(measure = \"PLN\", xi = cases, ni = total, slab = study, data = dat.crisafulli2020)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.curtin2002": {
+    "dataset": "dat.curtin2002",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(method.tau = \"DL\", digits = 2)",
+        "error": null
+      },
+      {
+        "code": "mg2 <- metagen(mean, SE, studlab = paste(author, year), data = dat.curtin2002, sm = \"MD\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.curtis1998": {
+    "dataset": "dat.curtis1998",
+    "configurations": 29,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.curtis1998",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ROM\", m1i = m1i, sd1i = sd1i, n1i = n1i, m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 29
+  },
+  "dat.dagostino1998": {
+    "dataset": "dat.dagostino1998",
+    "configurations": 34,
+    "effects": 5,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.dagostino1998",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"SMD\", m1i = mt, m2i = mc, sd1i = sdt, sd2i = sdc, n1i = nt, n2i = nc, data = dat, add.measure = TRUE)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = xt, ci = xc, n1i = nt, n2i = nc, data = dat, replace = FALSE, add.measure = TRUE, add = 1/2, to = \"all\")",
+        "error": null
+      },
+      {
+        "code": "dat$esid <- ave(dat$study, dat$study, FUN = seq)",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, obs = esid, rho = 0.7, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 38
+  },
+  "dat.damico2009": {
+    "dataset": "dat.damico2009",
+    "configurations": 14,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.damico2009",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = xt, n1i = nt, ci = xc, n2i = nc, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.debruin2009": {
+    "dataset": "dat.debruin2009",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.debruin2009",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = xi, ni = ni, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.demir2022": {
+    "dataset": "dat.demir2022",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.demir2022",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ABT\", ai = alpha, ni = n, mi = items, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.dogliotti2014": {
+    "dataset": "dat.dogliotti2014",
+    "configurations": 10,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treat = treatment, n = total, event = stroke, studlab = study, data = dat.dogliotti2014, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmeta(pw, ref = \"plac\")",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "selvars <- c(\"studlab\", \"event1\", \"n1\", \"event2\", \"n2\")",
+        "error": null
+      },
+      {
+        "code": "net.mh <- netmetabin(pw, ref = \"plac\")",
+        "error": "could not find function \"netmetabin\""
+      },
+      {
+        "code": "nb <- netbind(net, net.mh, random = FALSE, name = c(\"Inverse variance\", \"Mantel-Haenszel\"))",
+        "error": "could not find function \"netbind\""
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.dong2013": {
+    "dataset": "dat.dong2013",
+    "configurations": 12,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treatment, death, randomized, studlab = id, data = dat.dong2013, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmetabin(pw, ref = \"plac\")",
+        "error": "could not find function \"netmetabin\""
+      }
+    ],
+    "candidate_configurations": 13
+  },
+  "dat.dorn2007": {
+    "dataset": "dat.dorn2007",
+    "configurations": 8,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.dorn2007",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = x.a, n1i = n.a, ci = x.p, n2i = n.p, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat$yi[5] <- -0.44",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 16
+  },
+  "dat.dumouchel1994": {
+    "dataset": "dat.dumouchel1994",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "no2 <- escalc(measure = \"OR\", yi = log(or), sei = (log(upper) - log(lower))/(2 * qnorm(0.975)), slab = study, data = dat.dumouchel1994)",
+        "error": null
+      },
+      {
+        "code": "X <- model.matrix(~smoke + no2 + gender, data = no2)",
+        "error": null
+      },
+      {
+        "code": "colnames(X) <- c(\"intercept\", \"smoke\", \"no2\", \"gender\")",
+        "error": null
+      },
+      {
+        "code": "bm02 <- bmr(no2, X = X, tau.prior = \"DuMouchel\")",
+        "error": "could not find function \"bmr\""
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.egger2001": {
+    "dataset": "dat.egger2001",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.egger2001",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.feng2019": {
+    "dataset": "dat.feng2019",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "mp1 <- metaprop(depr, n, data = dat.feng2019, studlab = paste(author, year), common = FALSE, prediction = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.fine1993": {
+    "dataset": "dat.fine1993",
+    "configurations": 41,
+    "effects": 6,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.fine1993",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = e1i, n1i = nei, ci = c1i, n2i = nci, data = dat, var.names = c(\"y1i\", \"v1i\"))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = e2i, n1i = nei, ci = c2i, n2i = nci, data = dat, var.names = c(\"y2i\", \"v2i\"))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = e3i, n1i = nei, ci = c3i, n2i = nci, data = dat, var.names = c(\"y3i\", \"v3i\"))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = e4i, n1i = nei, ci = c4i, n2i = nci, data = dat, var.names = c(\"y4i\", \"v4i\"))",
+        "error": null
+      },
+      {
+        "code": "dat$v12i <- with(dat, nei/(e1i * (nei - e2i)) + nci/(c1i * (nci - c2i)))",
+        "error": null
+      },
+      {
+        "code": "dat$v13i <- with(dat, nei/(e1i * (nei - e3i)) + nci/(c1i * (nci - c3i)))",
+        "error": null
+      },
+      {
+        "code": "dat$v14i <- with(dat, nei/(e1i * (nei - e4i)) + nci/(c1i * (nci - c4i)))",
+        "error": null
+      },
+      {
+        "code": "dat$v23i <- with(dat, nei/(e2i * (nei - e3i)) + nci/(c2i * (nci - c3i)))",
+        "error": null
+      },
+      {
+        "code": "dat$v24i <- with(dat, nei/(e2i * (nei - e4i)) + nci/(c2i * (nci - c4i)))",
+        "error": null
+      },
+      {
+        "code": "dat$v34i <- with(dat, nei/(e3i * (nei - e4i)) + nci/(c3i * (nci - c4i)))",
+        "error": null
+      },
+      {
+        "code": "dat.long <- data.frame(study = rep(1:nrow(dat), each = 4), time = 1:4, yi = c(t(dat[c(\"y1i\", \"y2i\", \"y3i\", \"y4i\")])), vi = c(t(dat[c(\"v1i\", \"v2i\", \"v3i\", \"v4i\")])))",
+        "error": null
+      },
+      {
+        "code": "V <- lapply(split(dat, dat$study), function(x) matrix(c(x$v1i, x$v12i, x$v13i, x$v14i, x$v12i, x$v2i, x$v23i, x$v24i, x$v13i, x$v23i, x$v3i, x$v34i, x$v14i, x$v24i, x$v34i, x$v4i), nrow = 4, ncol = 4, byrow = TRUE))",
+        "error": null
+      },
+      {
+        "code": "dat.long <- na.omit(dat.long)",
+        "error": null
+      },
+      {
+        "code": "V[[17]] <- V[[17]][c(2, 4), c(2, 4)]",
+        "error": null
+      },
+      {
+        "code": "Vc <- V",
+        "error": null
+      },
+      {
+        "code": "repl.Vi <- function(Vi) {     res <- eigen(Vi)     if (any(res$values <= 0.08)) {         round(res$vectors %*% diag(res$values + 0.08) %*% t(res$vectors), 12)     }     else {         Vi     } }",
+        "error": null
+      },
+      {
+        "code": "Vc <- lapply(Vc, repl.Vi)",
+        "error": null
+      },
+      {
+        "code": "Vc[[17]] <- V[[17]]",
+        "error": null
+      },
+      {
+        "code": "Vc <- bldiag(Vc)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 42
+  },
+  "dat.franchini2012": {
+    "dataset": "dat.franchini2012",
+    "configurations": 14,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(list(Treatment1, Treatment2, Treatment3), n = list(n1, n2, n3), mean = list(y1, y2, y3), sd = list(sd1, sd2, sd3), data = dat.franchini2012, studlab = Study, sm = \"MD\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmeta(pw)",
+        "error": "could not find function \"netmeta\""
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.frank2008": {
+    "dataset": "dat.frank2008",
+    "configurations": 24,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.frank2008",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = bc.ins.del, bi = bc.ins.ins, ci = ct.ins.del, di = ct.ins.ins, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = bc.del.del, bi = bc.ins.ins, ci = ct.del.del, di = ct.ins.ins, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = bc.ins.del + bc.del.del, bi = bc.ins.ins, ci = ct.ins.del + ct.del.del, di = ct.ins.ins, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"REH\", ai = ct.ins.ins, bi = ct.ins.del, ci = ct.del.del, slab = study, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 24
+  },
+  "dat.furukawa2003": {
+    "dataset": "dat.furukawa2003",
+    "configurations": 12,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\", digits = 2)",
+        "error": null
+      },
+      {
+        "code": "mc2 <- metacont(Ne, Me, Se, Nc, Mc, Sc, common = FALSE, data = dat.furukawa2003, sm = \"SMD\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.gibson2002": {
+    "dataset": "dat.gibson2002",
+    "configurations": 44,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.gibson2002",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"SMD\", m1i = m1i, sd1i = sd1i, n1i = n1i, m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = ai, bi = bi, ci = ci, di = di, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"SMD\", m1i = m1i, sd1i = sd1i, n1i = n1i, m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat, add.measure = TRUE)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PBIT\", ai = ai, bi = bi, ci = ci, di = di, data = dat, replace = FALSE, add.measure = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 48
+  },
+  "dat.graves2010": {
+    "dataset": "dat.graves2010",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.graves2010",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.greb2008": {
+    "dataset": "dat.greb2008",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\")",
+        "error": null
+      },
+      {
+        "code": "mb1 <- metabin(Ee, Ne, Ec, Nc, data = dat.greb2008, studlab = study, label.e = \"High dose\", label.c = \"Standard\", label.left = \"Favours standard chemotherapy\", label.right = \"Favours high dose chemotherapy\", col.label.left = \"red\", col.label.right = \"green\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.greenland1992": {
+    "dataset": "dat.greenland1992",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "mg <- metagen(b, SE, data = dat.greenland1992, studlab = paste(author, year), sm = \"RR\", random = FALSE, overall.hetstat = FALSE, backtransf = FALSE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.gurusamy2011": {
+    "dataset": "dat.gurusamy2011",
+    "configurations": 12,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treatment, death, n, studlab = study, data = dat.gurusamy2011, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net.MH <- netmetabin(pw, ref = \"cont\")",
+        "error": "could not find function \"netmetabin\""
+      },
+      {
+        "code": "net.IV <- netmeta(pw, ref = \"cont\")",
+        "error": "could not find function \"netmeta\""
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.hackshaw1998": {
+    "dataset": "dat.hackshaw1998",
+    "configurations": 10,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hackshaw1998",
+        "error": null
+      },
+      {
+        "code": "dat$yi <- NULL",
+        "error": null
+      },
+      {
+        "code": "dat$vi <- NULL",
+        "error": null
+      },
+      {
+        "code": "dat <- data.frame(dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- conv.wald(out = or, ci.lb = or.lb, ci.ub = or.ub, data = dat, transf = log)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.hahn2001": {
+    "dataset": "dat.hahn2001",
+    "configurations": 8,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hahn2001",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.hannum2020": {
+    "dataset": "dat.hannum2020",
+    "configurations": 9,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hannum2020",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = xi, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat_split <- split(dat, dat$objectivity)",
+        "error": null
+      },
+      {
+        "code": "dat_objective <- dat_split[[\"Objective\"]]",
+        "error": null
+      },
+      {
+        "code": "dat_subjective <- dat_split[[\"Subjective\"]]",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.hart1999": {
+    "dataset": "dat.hart1999",
+    "configurations": 14,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hart1999",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"IRR\", x1i = x1i, x2i = x2i, t1i = t1i, t2i = t2i, data = dat)",
+        "error": null
+      },
+      {
+        "code": "op <- par(cex = 0.85, font = 2)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.hartmannboyce2018": {
+    "dataset": "dat.hartmannboyce2018",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hartmannboyce2018",
+        "error": null
+      },
+      {
+        "code": "dat$treatment <- factor(dat$treatment, levels = unique(dat$treatment))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.hasselblad1998": {
+    "dataset": "dat.hasselblad1998",
+    "configurations": 8,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hasselblad1998",
+        "error": null
+      },
+      {
+        "code": "pairs <- data.frame(do.call(rbind, sapply(split(dat$trt, dat$study), function(x) t(combn(x, 2)))), stringsAsFactors = FALSE)",
+        "error": null
+      },
+      {
+        "code": "lvls <- c(\"no_contact\", \"self_help\", \"ind_counseling\", \"grp_counseling\")",
+        "error": null
+      },
+      {
+        "code": "pairs$X1 <- factor(pairs$X1, levels = lvls)",
+        "error": null
+      },
+      {
+        "code": "pairs$X2 <- factor(pairs$X2, levels = lvls)",
+        "error": null
+      },
+      {
+        "code": "tab <- table(pairs[, 1], pairs[, 2])",
+        "error": null
+      },
+      {
+        "code": "g <- graph_from_adjacency_matrix(tab, mode = \"plus\", weighted = TRUE, diag = FALSE)",
+        "error": "could not find function \"graph_from_adjacency_matrix\""
+      },
+      {
+        "code": "vertex_attr(g, \"name\") <- c(\"No Contact\", \"Self-Help\", \"Individual\\nCounseling\", \"Group\\nCounseling\")",
+        "error": "object 'g' not found"
+      },
+      {
+        "code": "dat <- escalc(measure = \"PLO\", xi = xi, ni = ni, add = 1/2, to = \"all\", data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat$trt <- factor(dat$trt, levels = c(\"no_contact\", \"self_help\", \"ind_counseling\", \"grp_counseling\"))",
+        "error": null
+      },
+      {
+        "code": "levels(dat$trt) <- paste0(\" \", levels(dat$trt))",
+        "error": null
+      },
+      {
+        "code": "dat <- to.wide(dat.hasselblad1998, study = \"study\", grp = \"trt\", ref = \"no_contact\", grpvars = 6:7)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = xi.1, n1i = ni.1, ci = xi.2, n2i = ni.2, add = 1/2, to = \"all\", data = dat)",
+        "error": null
+      },
+      {
+        "code": "calc.v <- function(x) {     v <- matrix(1/(x$xi.2[1] + 1/2) + 1/(x$ni.2[1] - x$xi.2[1] + 1/2), nrow = nrow(x), ncol = nrow(x))     diag(v) <- x$vi     v }",
+        "error": null
+      },
+      {
+        "code": "V <- bldiag(lapply(split(dat, dat$study), calc.v))",
+        "error": null
+      },
+      {
+        "code": "dat <- contrmat(dat, grp1 = \"trt.1\", grp2 = \"trt.2\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.higgins2008": {
+    "dataset": "dat.higgins2008",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 3)",
+        "error": null
+      },
+      {
+        "code": "m <- metabin(resp.halo, resp.halo + fail.halo, resp.plac, resp.plac + fail.plac, data = dat.higgins2008, studlab = author, sm = \"OR\", method = \"Inverse\", random = FALSE, label.e = \"Haloperidol\", label.c = \"Placebo\", label.left = \"Favours placebo\", label.right = \"Favours haloperidol\")",
+        "error": null
+      },
+      {
+        "code": "m.b <- metamiss(m, miss.halo, miss.plac, method.miss = \"b\", small.values = \"undesirable\")",
+        "error": "could not find function \"metamiss\""
+      },
+      {
+        "code": "m.w <- metamiss(m, miss.halo, miss.plac, method.miss = \"w\", small.values = \"undesirable\")",
+        "error": "could not find function \"metamiss\""
+      },
+      {
+        "code": "m.sens <- metamerge(m, m.b, text.pooled2 = \"Best case scenario\")",
+        "error": "object 'm.b' not found"
+      },
+      {
+        "code": "m.sens <- metamerge(m.sens, m.w, text.pooled2 = \"Worst case scenario\")",
+        "error": "object 'm.sens' not found"
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.hine1989": {
+    "dataset": "dat.hine1989",
+    "configurations": 8,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.hine1989",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RD\", n1i = n1i, n2i = n2i, ai = ai, ci = ci, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.huber2000": {
+    "dataset": "dat.huber2000",
+    "configurations": 0,
+    "effects": 0,
+    "status": "excluded: individual-participant recurrence records; no supplied study-level yi/vi or study-level moderator/variance combination",
+    "preparation": [
+      {
+        "code": "wmw <- tapply(dat.huber2000, dat.huber2000$study, function(x) {     wilcox.test(x$recurrences[x$treatment == \"Placebo\"], x$recurrences[x$treatment == \"Uro-Vaxom\"])$statistic }, simplify = TRUE)",
+        "error": null
+      },
+      {
+        "code": "patients <- table(dat.huber2000[, 1:2])",
+        "error": null
+      },
+      {
+        "code": "prob <- wmw/(patients[, 1] * patients[, 2])",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 0
+  },
+  "dat.ishak2007": {
+    "dataset": "dat.ishak2007",
+    "configurations": 3,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.ishak2007",
+        "error": null
+      },
+      {
+        "code": "dat <- reshape(dat, direction = \"long\", idvar = \"study\", v.names = c(\"yi\", \"vi\"), varying = list(c(2, 4, 6, 8), c(3, 5, 7, 9)))",
+        "error": null
+      },
+      {
+        "code": "dat <- dat[order(study, time), ]",
+        "error": null
+      },
+      {
+        "code": "dat <- dat[!is.na(yi), ]",
+        "error": null
+      },
+      {
+        "code": "rownames(dat) <- NULL",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, time1 = time, phi = 0.97, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.kalaian1996": {
+    "dataset": "dat.kalaian1996",
+    "configurations": 7,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.kalaian1996",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, type = outcome, data = dat, rho = 0.66)",
+        "error": null
+      },
+      {
+        "code": "dat$loghrs <- log(dat$hrs) - mean(log(dat$hrs), na.rm = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 7
+  },
+  "dat.karner2014": {
+    "dataset": "dat.karner2014",
+    "configurations": 192,
+    "effects": 9,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "karner.exa <- escalc(measure = \"OR\", ai = tiotropium.exa, n1i = tiotropium.total, ci = placebo.exa, n2i = placebo.total, slab = study, data = dat.karner2014)",
+        "error": null
+      },
+      {
+        "code": "karner.sgrq <- escalc(measure = \"MD\", yi = sgrq.md, sei = sgrq.se, slab = study, data = dat.karner2014, subset = is.finite(dat.karner2014$sgrq.md))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 216
+  },
+  "dat.kearon1998": {
+    "dataset": "dat.kearon1998",
+    "configurations": 25,
+    "effects": 6,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.kearon1998",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = tp, n1i = np, ci = nn - tn, n2i = nn, data = dat, add = 1/2, to = \"all\")",
+        "error": null
+      },
+      {
+        "code": "reg <- regtest(res, model = \"lm\")",
+        "error": "Cannot find the object/variable ('res') specified for the 'x' argument."
+      },
+      {
+        "code": "ys <- seq(0, 2, length = 100)",
+        "error": null
+      },
+      {
+        "code": "reg <- regtest(res, model = \"lm\", predictor = \"ni\")",
+        "error": "Cannot find the object/variable ('res') specified for the 'x' argument."
+      },
+      {
+        "code": "ys <- seq(0, 300, length = 100)",
+        "error": null
+      },
+      {
+        "code": "dat$invessi <- 1/(4 * dat$np) + 1/(4 * dat$nn)",
+        "error": null
+      },
+      {
+        "code": "reg <- regtest(tmp, model = \"lm\")",
+        "error": "Cannot find the object/variable ('tmp') specified for the 'x' argument."
+      },
+      {
+        "code": "ys <- seq(0, 0.2, length = 100)",
+        "error": null
+      },
+      {
+        "code": "dat <- to.long(measure = \"OR\", ai = tp, n1i = np, ci = tn, n2i = nn, data = dat.kearon1998, subset = patients == \"asymptomatic\", append = FALSE)",
+        "error": null
+      },
+      {
+        "code": "dat$group <- factor(dat$group, levels = c(1, 2), labels = c(\"sensitivity\", \"specificity\"))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PLO\", xi = out1, mi = out2, data = dat, add = 1/2, to = \"all\", include = group == \"sensitivity\")",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PLO\", xi = out1, mi = out2, data = dat, add = 1/2, to = \"all\", include = group == \"specificity\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 25
+  },
+  "dat.knapp2017": {
+    "dataset": "dat.knapp2017",
+    "configurations": 7,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.knapp2017",
+        "error": null
+      },
+      {
+        "code": "dat$task.diff <- unlist(lapply(split(dat, dat$study), function(x) {     task.int <- as.integer(factor(x$task))     diff.int <- as.integer(factor(x$difficulty))     diff.int[is.na(diff.int)] <- 1     paste0(task.int, \".\", diff.int) }))",
+        "error": null
+      },
+      {
+        "code": "R <- matrix(0.4, nrow = 8, ncol = 8)",
+        "error": null
+      },
+      {
+        "code": "R[5:8, 1:4] <- R[1:4, 5:8] <- 0.28",
+        "error": null
+      },
+      {
+        "code": "diag(R[1:4, 5:8]) <- 0.7",
+        "error": null
+      },
+      {
+        "code": "diag(R[5:8, 1:4]) <- 0.7",
+        "error": null
+      },
+      {
+        "code": "diag(R) <- 1",
+        "error": null
+      },
+      {
+        "code": "rownames(R) <- colnames(R) <- paste0(rep(1:2, each = 4), \".\", 1:4)",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = study, grp1 = group1, grp2 = group2, w1 = n_sz, w2 = n_hc, obs = task.diff, rho = R, data = dat)",
+        "error": null
+      },
+      {
+        "code": "sav <- robust(res, cluster = study)",
+        "error": "object 'res' not found"
+      },
+      {
+        "code": "sav <- robust(res, cluster = study, clubSandwich = TRUE)",
+        "error": "object 'res' not found"
+      }
+    ],
+    "candidate_configurations": 7
+  },
+  "dat.konstantopoulos2011": {
+    "dataset": "dat.konstantopoulos2011",
+    "configurations": 1,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.konstantopoulos2011",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 1
+  },
+  "dat.landenberger2005": {
+    "dataset": "dat.landenberger2005",
+    "configurations": 12,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.landenberger2005",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = n.cbt.non, bi = n.cbt.rec, ci = n.ctrl.non, di = n.ctrl.rec, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.laopaiboon2015": {
+    "dataset": "dat.laopaiboon2015",
+    "configurations": 8,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.laopaiboon2015",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = ai, n1i = n1i, ci = ci, n2i = n2i, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.lau1992": {
+    "dataset": "dat.lau1992",
+    "configurations": 10,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.lau1992",
+        "error": null
+      },
+      {
+        "code": "sav <- cumul(res)",
+        "error": "object 'res' not found"
+      },
+      {
+        "code": "id <- c(4, 8, 15, 33)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.lee2004": {
+    "dataset": "dat.lee2004",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.lee2004",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.lehmann2018": {
+    "dataset": "dat.lehmann2018",
+    "configurations": 49,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.lehmann2018",
+        "error": null
+      },
+      {
+        "code": "red_romance_malep <- dat[dat$Gender == \"Males\", ]",
+        "error": null
+      },
+      {
+        "code": "red_romance_femalep <- dat[dat$Gender == \"Females\", ]",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 49
+  },
+  "dat.li2007": {
+    "dataset": "dat.li2007",
+    "configurations": 15,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.li2007",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 15
+  },
+  "dat.lim2014": {
+    "dataset": "dat.lim2014",
+    "configurations": 8,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.lim2014$o_o_unadj",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "tree <- dat.lim2014$o_o_unadj_tree",
+        "error": null
+      },
+      {
+        "code": "tree <- compute.brlen(tree)",
+        "error": "could not find function \"compute.brlen\""
+      },
+      {
+        "code": "A <- vcv(tree, corr = TRUE)",
+        "error": "could not find function \"vcv\""
+      },
+      {
+        "code": "dat$species.phy <- dat$species",
+        "error": null
+      },
+      {
+        "code": "dat$esid <- 1:nrow(dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.linde2005": {
+    "dataset": "dat.linde2005",
+    "configurations": 25,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.linde2005",
+        "error": null
+      },
+      {
+        "code": "dat <- dat[-c(5, 6, 26), ]",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"RR\", ai = ai, ci = ci, n1i = n1i, n2i = n2i, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 26
+  },
+  "dat.linde2015": {
+    "dataset": "dat.linde2015",
+    "configurations": 50,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "trts <- c(\"TCA\", \"SSRI\", \"SNRI\", \"NRI\", \"Low-dose SARI\", \"NaSSa\", \"rMAO-A\", \"Hypericum\", \"Placebo\")",
+        "error": null
+      },
+      {
+        "code": "pw1 <- pairwise(list(treatment1, treatment2, treatment3), event = list(resp1, resp2, resp3), n = list(n1, n2, n3), studlab = id, data = dat.linde2015, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net1 <- netmeta(pw1, common = FALSE, reference = \"Placebo\", seq = trts, small.values = \"undesirable\")",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "pw2 <- pairwise(treat = list(treatment1, treatment2, treatment3), event = list(remi1, remi2, remi3), n = list(n1, n2, n3), studlab = id, data = dat.linde2015, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net2 <- netmeta(pw2, common = FALSE, seq = trts, ref = \"Placebo\", small.values = \"undesirable\")",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "nr1 <- netrank(net1)",
+        "error": "could not find function \"netrank\""
+      },
+      {
+        "code": "nr2 <- netrank(net2)",
+        "error": "could not find function \"netrank\""
+      },
+      {
+        "code": "outcomes <- c(\"Early response\", \"Early remission\")",
+        "error": null
+      },
+      {
+        "code": "po12 <- netposet(nr1, nr2, outcomes = outcomes)",
+        "error": "could not find function \"netposet\""
+      }
+    ],
+    "candidate_configurations": 52
+  },
+  "dat.linde2016": {
+    "dataset": "dat.linde2016",
+    "configurations": 11,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "trts <- c(\"SSRI\", \"Face-to-face CBT\", \"Face-to-face interpsy\", \"Face-to-face PST\", \"Face-to-face CBT + SSRI\", \"Face-to-face interpsy + SSRI\", \"Face-to-face PST + SSRI\", \"Face-to-face psychodyn\", \"Other face-to-face\", \"TCA\", \"SNRI\", \"NRI\", \"Low-dose SARI\", \"NaSSa\", \"rMAO-A\", \"Ind drug\", \"Hypericum\", \"Remote CBT\", \"Self-help CBT\", \"No contact CBT\", \"UC\", \"Placebo\")",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treat = int, event = resp, n = n, studlab = paste(author, year), data = dat.linde2016, reference = \"plac\", sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "nma <- netmeta(pw, reference.group = \"placebo\", seq = trts, common = FALSE)",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "cnma <- netcomb(nma, inactive = \"placebo\")",
+        "error": "could not find function \"netcomb\""
+      }
+    ],
+    "candidate_configurations": 11
+  },
+  "dat.lloyd2010": {
+    "dataset": "dat.lloyd2010",
+    "configurations": 16,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "lloyd5 <- subset(dat.lloyd2010, !is.na(mean.haq) & !is.na(mean.das))",
+        "error": null
+      },
+      {
+        "code": "m.das <- metagen(mean.das, lower = lower.das, upper = upper.das, data = lloyd5, sm = \"MD\", studlab = paste(author, year), random = FALSE)",
+        "error": null
+      },
+      {
+        "code": "m.haq <- metagen(mean.haq, lower = lower.haq, upper = upper.haq, data = lloyd5, sm = \"MD\", studlab = paste(author, year), random = FALSE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 16
+  },
+  "dat.lopez2019": {
+    "dataset": "dat.lopez2019",
+    "configurations": 23,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.lopez2019",
+        "error": null
+      },
+      {
+        "code": "pairs <- data.frame(do.call(rbind, sapply(split(dat$treatment, dat$study), function(x) t(combn(x, 2)))), stringsAsFactors = FALSE)",
+        "error": null
+      },
+      {
+        "code": "pairs$X1 <- factor(pairs$X1, levels = sort(unique(dat$treatment)))",
+        "error": null
+      },
+      {
+        "code": "pairs$X2 <- factor(pairs$X2, levels = sort(unique(dat$treatment)))",
+        "error": null
+      },
+      {
+        "code": "tab <- table(pairs[, 1], pairs[, 2])",
+        "error": null
+      },
+      {
+        "code": "g <- graph_from_adjacency_matrix(tab, mode = \"plus\", weighted = TRUE, diag = FALSE)",
+        "error": "could not find function \"graph_from_adjacency_matrix\""
+      },
+      {
+        "code": "dat <- to.wide(dat, study = \"study\", grp = \"treatment\", ref = \"TAU\", grpvars = c(\"diff\", \"se\", \"n\"), postfix = c(\"1\", \"2\"))",
+        "error": null
+      },
+      {
+        "code": "dat$yi <- with(dat, diff1 - diff2)",
+        "error": null
+      },
+      {
+        "code": "dat$vi <- with(dat, se1^2 + se2^2)",
+        "error": null
+      },
+      {
+        "code": "calc.v <- function(x) {     v <- matrix(x$se2[1]^2, nrow = nrow(x), ncol = nrow(x))     diag(v) <- x$vi     v }",
+        "error": null
+      },
+      {
+        "code": "V <- bldiag(lapply(split(dat, dat$study), calc.v))",
+        "error": null
+      },
+      {
+        "code": "dat <- contrmat(dat, grp1 = \"treatment1\", grp2 = \"treatment2\")",
+        "error": null
+      },
+      {
+        "code": "dat$CBT <- with(dat, ifelse(F2F.CBT + Hybrid.CBT + Multimedia.CBT > 0, 1, 0))",
+        "error": null
+      },
+      {
+        "code": "rownames <- names(coef(res4))",
+        "error": "object 'res4' not found"
+      },
+      {
+        "code": "rownames <- sub(\".\", \" \", rownames, fixed = TRUE)",
+        "error": "cannot coerce type 'closure' to vector of type 'character'"
+      },
+      {
+        "code": "rownames[5:14] <- c(\"Multimedia\", \"Cognitive Techniques\", \"Behavioral Activiation\", \"Psycheducation\", \"Homework\", \"Problem Solving\", \"Social Skills Training\", \"Relaxation\", \"Goal Setting\", \"Final Session\")",
+        "error": "object of type 'closure' is not subsettable"
+      }
+    ],
+    "candidate_configurations": 23
+  },
+  "dat.maire2019": {
+    "dataset": "dat.maire2019",
+    "configurations": 6,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.maire2019$dat",
+        "error": null
+      },
+      {
+        "code": "dmat <- dat.maire2019$dmat",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 6
+  },
+  "dat.mccurdy2020": {
+    "dataset": "dat.mccurdy2020",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.mccurdy2020",
+        "error": null
+      },
+      {
+        "code": "sav <- robust(res, cluster = article, clubSandwich = TRUE)",
+        "error": "object 'res' not found"
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.mcdaniel1994": {
+    "dataset": "dat.mcdaniel1994",
+    "configurations": 4,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.mcdaniel1994",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.meeker2017": {
+    "dataset": "dat.meeker2017",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "es <- escalc(measure = \"GEN\", yi = mean, sei = se, slab = team, ni = batters, data = dat.meeker2017)",
+        "error": null
+      },
+      {
+        "code": "Xmat <- cbind(intercept = 1, offset = rep(c(0.5, -0.5), each = 5))",
+        "error": null
+      },
+      {
+        "code": "rownames(Xmat) <- rownames(dat.meeker2017)",
+        "error": null
+      },
+      {
+        "code": "mreg <- bmr(es, X = Xmat)",
+        "error": "could not find function \"bmr\""
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.metap": {
+    "dataset": "dat.metap",
+    "configurations": 0,
+    "effects": 0,
+    "status": "excluded: collections of p-values without paired study-level effect estimates and sampling variances",
+    "preparation": [],
+    "candidate_configurations": 0
+  },
+  "dat.michael2013": {
+    "dataset": "dat.michael2013",
+    "configurations": 12,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.michael2013",
+        "error": null
+      },
+      {
+        "code": "dat <- metafor::escalc(measure = \"MD\", m1i = Brain_m, m2i = No_brain_m, sd1i = Brain_s, sd2i = No_brain_s, n1i = Brain_n, n2i = No_brain_n, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 12
+  },
+  "dat.molloy2014": {
+    "dataset": "dat.molloy2014",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.molloy2014",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat, slab = paste(authors, year, sep = \", \"))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.moore1998": {
+    "dataset": "dat.moore1998",
+    "configurations": 9,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "m <- metabin(Ee, Ne, Ec, Nc, data = dat.moore1998, sm = \"OR\", studlab = id, label.e = \"NSAIDS\", label.c = \"Placebo\")",
+        "error": null
+      },
+      {
+        "code": "fun <- funnel(m, type = \"contour\", random = FALSE, pch = 16)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.moura2021": {
+    "dataset": "dat.moura2021",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.moura2021$dat",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = ri, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "tree <- dat.moura2021$tree",
+        "error": null
+      },
+      {
+        "code": "tree <- compute.brlen(tree)",
+        "error": "could not find function \"compute.brlen\""
+      },
+      {
+        "code": "A <- vcv(tree, corr = TRUE)",
+        "error": "could not find function \"vcv\""
+      },
+      {
+        "code": "dat$species.id.phy <- dat$species.id",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.nakagawa2007": {
+    "dataset": "dat.nakagawa2007",
+    "configurations": 2,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.nakagawa2007",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = Correlation, ni = SampleSize, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 2
+  },
+  "dat.nielweise2007": {
+    "dataset": "dat.nielweise2007",
+    "configurations": 10,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.nielweise2007",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.nielweise2008": {
+    "dataset": "dat.nielweise2008",
+    "configurations": 5,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.nielweise2008",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 5
+  },
+  "dat.nissen2007": {
+    "dataset": "dat.nissen2007",
+    "configurations": 28,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "logOR.inf <- rbind(Peto = c(OR = ma01$b, lower = ma01$ci.lb, upper = ma01$ci.ub), `IV-CC` = c(OR = ma03$b, lower = ma03$ci.lb, upper = ma03$ci.ub), `M4-UM.FS` = c(OR = ma05$b, lower = ma05$ci.lb, upper = ma05$ci.ub), `M5-UM.RS` = c(OR = ma07$b, lower = ma07$ci.lb, upper = ma07$ci.ub), `M7-CM.AL` = c(OR = ma09$b, lower = ma09$ci.lb, upper = ma09$ci.ub))",
+        "error": "object 'ma01' not found"
+      },
+      {
+        "code": "logOR.mort <- rbind(Peto = c(OR = ma02$b, lower = ma02$ci.lb, upper = ma02$ci.ub), `IV-CC` = c(OR = ma04$b, lower = ma04$ci.lb, upper = ma04$ci.ub), `M4-UM.FS` = c(OR = ma06$b, lower = ma06$ci.lb, upper = ma06$ci.ub), `M5-UM.RS` = c(OR = ma08$b, lower = ma08$ci.lb, upper = ma08$ci.ub), `M7-CM.AL` = c(OR = ma10$b, lower = ma10$ci.lb, upper = ma10$ci.ub))",
+        "error": "object 'ma02' not found"
+      }
+    ],
+    "candidate_configurations": 28
+  },
+  "dat.normand1999": {
+    "dataset": "dat.normand1999",
+    "configurations": 18,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.normand1999",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"MD\", m1i = m1i, sd1i = sd1i, n1i = n1i, m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ROM\", m1i = m1i, sd1i = sd1i, n1i = n1i, m2i = m2i, sd2i = sd2i, n2i = n2i, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 18
+  },
+  "dat.obrien2003": {
+    "dataset": "dat.obrien2003",
+    "configurations": 29,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.obrien2003",
+        "error": null
+      },
+      {
+        "code": "dat2 <- to.wide(dat, study = \"study\", grp = \"grp\", ref = 1, grpvars = c(\"bmi\", \"cases\", \"total\"), addid = FALSE, adddesign = FALSE, postfix = c(1, 2))",
+        "error": null
+      },
+      {
+        "code": "dat2 <- escalc(measure = \"RR\", ai = cases1, n1i = total1, ci = cases2, n2i = total2, data = dat2)",
+        "error": null
+      },
+      {
+        "code": "dd <- c(0, diff(dat2$study))",
+        "error": null
+      },
+      {
+        "code": "dd[dd > 0] <- 1",
+        "error": null
+      },
+      {
+        "code": "rows <- (1:nrow(dat2)) + cumsum(dd)",
+        "error": null
+      },
+      {
+        "code": "rows <- 1 + max(rows) - rows",
+        "error": null
+      },
+      {
+        "code": "slabs <- mapply(function(x, y, z) as.expression(bquote(.(x)^.(y) ~ .(z))), dat2$author, dat2$ref, dat2$year)",
+        "error": null
+      },
+      {
+        "code": "dat$bmicent <- with(dat, bmi - ave(bmi, study))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = cases, ni = total, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat$yi <- dat$yi * 100",
+        "error": null
+      },
+      {
+        "code": "dat$vi <- dat$vi * 100^2",
+        "error": null
+      },
+      {
+        "code": "res$slab <- dat$ref",
+        "error": "object 'res' not found"
+      },
+      {
+        "code": "knots <- attr(rcs(model.matrix(res)[, 2], 4), \"parms\")",
+        "error": "could not find function \"rcs\""
+      },
+      {
+        "code": "xs <- seq(-10, 10, length = 1000)",
+        "error": null
+      },
+      {
+        "code": "tmp <- regplot(res, mod = 2, pred = sav, xvals = xs, xlab = expression(\"Within-Study Mean Centered BMI\" ~ (kg/m^2)), ylab = \"Preeclampsia Prevalence (%)\", las = 1, bty = \"l\", at = seq(0, 18, by = 2), olim = c(0, 100), psize = 2, bg = \"gray90\", label = TRUE, offset = 0, labsize = 0.6)",
+        "error": "object 'res' not found"
+      }
+    ],
+    "candidate_configurations": 38
+  },
+  "dat.pagliaro1992": {
+    "dataset": "dat.pagliaro1992",
+    "configurations": 10,
+    "effects": 3,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.pagliaro1992",
+        "error": null
+      },
+      {
+        "code": "dat.c <- to.wide(dat, study = \"study\", grp = \"trt\", grpvars = 3:4)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PLO\", xi = xi, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat$trt <- relevel(factor(dat$trt), ref = \"control\")",
+        "error": null
+      },
+      {
+        "code": "levels(dat$trt) <- paste0(\" \", levels(dat$trt))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.pignon2000": {
+    "dataset": "dat.pignon2000",
+    "configurations": 9,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.pignon2000",
+        "error": null
+      },
+      {
+        "code": "dat$yi <- with(dat, OmE/V)",
+        "error": null
+      },
+      {
+        "code": "dat$vi <- with(dat, 1/V)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.poole2003": {
+    "dataset": "dat.poole2003",
+    "configurations": 14,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\", digits.I2 = 2, digits.tau = 3, digits.sd = 2)",
+        "error": null
+      },
+      {
+        "code": "m <- metacont(Ne, Me, Se, Nc, Mc, Sc, data = dat.poole2003, studlab = paste(author, year), common = FALSE, subgroup = duration, subgroup.name = \"Duration\", sep.subgroup = \": \", label.e = \"Mucolytic agent\", label.c = \"Placebo\", label.left = \"Favours mucolytic agent\", label.right = \"Favours placebo\", col.label.left = \"green\", col.label.right = \"red\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.pritz1997": {
+    "dataset": "dat.pritz1997",
+    "configurations": 8,
+    "effects": 5,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.pritz1997",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = xi, ni = ni, data = dat, add = 0)",
+        "error": null
+      },
+      {
+        "code": "theta.hat <- sum(dat$ni * dat$yi)/sum(dat$ni)",
+        "error": null
+      },
+      {
+        "code": "se.theta.hat <- sqrt(sum(dat$ni^2 * dat$vi)/sum(dat$ni)^2)",
+        "error": null
+      },
+      {
+        "code": "ci.lb <- theta.hat - 1.96 * se.theta.hat",
+        "error": null
+      },
+      {
+        "code": "ci.ub <- theta.hat + 1.96 * se.theta.hat",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = xi, ni = ni, data = dat, add = 0, vtype = \"AV\")",
+        "error": null
+      },
+      {
+        "code": "agg <- escalc(measure = \"PR\", xi = sum(dat$xi), ni = sum(dat$ni))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PR\", xi = xi, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"PLO\", xi = xi, ni = ni, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.quan2000": {
+    "dataset": "dat.quan2000",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\")",
+        "error": null
+      },
+      {
+        "code": "m <- metabin(Ee, Ne, Ec, Nc, sm = \"OR\", method = \"Peto\", data = dat.quan2000, studlab = study, random = FALSE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.raudenbush1985": {
+    "dataset": "dat.raudenbush1985",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.raudenbush1985",
+        "error": null
+      },
+      {
+        "code": "dat$weeks.c <- ifelse(dat$weeks > 3, 3, dat$weeks)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.riley2003": {
+    "dataset": "dat.riley2003",
+    "configurations": 0,
+    "effects": 3,
+    "status": "excluded: effects and variances supplied, but remaining fields are identifiers, an SE, and a categorical outcome; no eligible varying numeric moderator",
+    "preparation": [
+      {
+        "code": "dat <- dat.riley2003",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 0
+  },
+  "dat.rivera2025": {
+    "dataset": "dat.rivera2025",
+    "configurations": 32,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.rivera2025",
+        "error": null
+      },
+      {
+        "code": "report1 <- metaprop(TP, n1, data = dat, common = TRUE, random = TRUE, studlab = paste(Author, Year))",
+        "error": null
+      },
+      {
+        "code": "report2 <- metaprop(TN, n2, data = dat, common = TRUE, random = TRUE, studlab = paste(Author, Year))",
+        "error": null
+      },
+      {
+        "code": "report3 <- metabin(TP, n1, n2 - TN, n2, data = dat, sm = \"OR\", common = FALSE, random = TRUE, studlab = paste(Author, Year), allstudies = TRUE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 32
+  },
+  "dat.roever2022": {
+    "dataset": "dat.roever2022",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "studylab <- unique(dat.roever2022$study)",
+        "error": null
+      },
+      {
+        "code": "colvec <- rainbow(length(studylab))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.senn2013": {
+    "dataset": "dat.senn2013",
+    "configurations": 9,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.senn2013",
+        "error": null
+      },
+      {
+        "code": "pairs <- data.frame(do.call(rbind, sapply(split(dat$treatment, dat$study), function(x) t(combn(x, 2)))), stringsAsFactors = FALSE)",
+        "error": null
+      },
+      {
+        "code": "pairs$X1 <- factor(pairs$X1, levels = sort(unique(dat$treatment)))",
+        "error": null
+      },
+      {
+        "code": "pairs$X2 <- factor(pairs$X2, levels = sort(unique(dat$treatment)))",
+        "error": null
+      },
+      {
+        "code": "tab <- table(pairs[, 1], pairs[, 2])",
+        "error": null
+      },
+      {
+        "code": "g <- graph_from_adjacency_matrix(tab, mode = \"plus\", weighted = TRUE, diag = FALSE)",
+        "error": "could not find function \"graph_from_adjacency_matrix\""
+      },
+      {
+        "code": "dat <- escalc(measure = \"MN\", mi = mi, sdi = sdi, ni = ni, data = dat)",
+        "error": null
+      },
+      {
+        "code": "dat$treatment <- relevel(factor(dat$treatment), ref = \"placebo\")",
+        "error": null
+      },
+      {
+        "code": "levels(dat$treatment) <- paste0(\" \", levels(dat$treatment))",
+        "error": null
+      },
+      {
+        "code": "w <- t(tail(vcov(res.fe) %*% t(model.matrix(res.fe)) %*% weights(res.fe, type = \"matrix\"), 9))",
+        "error": "error in evaluating the argument 'x' in selecting a method for function 't': error in evaluating the argument 'x' in selecting a method for function 'tail': object 'res.fe' not found"
+      },
+      {
+        "code": "rownames(w) <- res.fe$slab",
+        "error": "object 'res.fe' not found"
+      },
+      {
+        "code": "cols <- colorRampPalette(c(\"blue\", \"gray95\", \"red\"))(9)",
+        "error": null
+      },
+      {
+        "code": "qi <- sort(by((resid(res.fe)/sqrt(dat$vi))^2, dat$study, sum))",
+        "error": "object 'res.fe' not found"
+      },
+      {
+        "code": "s <- length(qi)",
+        "error": "object 'qi' not found"
+      },
+      {
+        "code": "dat <- dat.senn2013[c(1, 4:2, 5:6)]",
+        "error": null
+      },
+      {
+        "code": "dat <- to.wide(dat, study = \"study\", grp = \"treatment\", ref = \"placebo\", grpvars = 4:6)",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"MD\", m1i = mi.1, sd1i = sdi.1, n1i = ni.1, m2i = mi.2, sd2i = sdi.2, n2i = ni.2, data = dat)",
+        "error": null
+      },
+      {
+        "code": "calc.v <- function(x) {     v <- matrix(x$sdi.2[1]^2/x$ni.2[1], nrow = nrow(x), ncol = nrow(x))     diag(v) <- x$vi     v }",
+        "error": null
+      },
+      {
+        "code": "V <- bldiag(lapply(split(dat, dat$study), calc.v))",
+        "error": null
+      },
+      {
+        "code": "dat <- contrmat(dat, grp1 = \"treatment.1\", grp2 = \"treatment.2\")",
+        "error": null
+      },
+      {
+        "code": "contr <- data.frame(t(combn(names(coef(res)), 2)))",
+        "error": "error in evaluating the argument 'x' in selecting a method for function 't': object 'res' not found"
+      },
+      {
+        "code": "contr <- contrmat(contr, \"X1\", \"X2\", last = \"vildagliptin\")",
+        "error": "object 'contr' not found"
+      },
+      {
+        "code": "rownames(contr) <- paste(contr$X1, \"-\", contr$X2)",
+        "error": "object 'contr' not found"
+      },
+      {
+        "code": "contr <- as.matrix(contr[-c(1:2)])",
+        "error": "error in evaluating the argument 'x' in selecting a method for function 'as.matrix': object 'contr' not found"
+      },
+      {
+        "code": "sav[[\"slab\"]] <- rownames(contr)",
+        "error": "object 'contr' not found"
+      },
+      {
+        "code": "contr <- data.frame(t(combn(c(names(coef(res)), \"placebo\"), 2)))",
+        "error": "error in evaluating the argument 'x' in selecting a method for function 't': object 'res' not found"
+      },
+      {
+        "code": "contr <- contrmat(contr, \"X1\", \"X2\", last = \"placebo\", append = FALSE)",
+        "error": "object 'contr' not found"
+      },
+      {
+        "code": "b <- c(coef(res), 0)",
+        "error": "object 'res' not found"
+      },
+      {
+        "code": "vb <- bldiag(vcov(res), 0)",
+        "error": "object 'res' not found"
+      },
+      {
+        "code": "pvals <- apply(contr, 1, function(x) pnorm((x %*% b)/sqrt(t(x) %*% vb %*% x)))",
+        "error": "object 'contr' not found"
+      },
+      {
+        "code": "tab <- vec2mat(pvals, corr = FALSE)",
+        "error": "object 'pvals' not found"
+      },
+      {
+        "code": "tab[upper.tri(tab)] <- t((1 - tab)[upper.tri(tab)])",
+        "error": null
+      },
+      {
+        "code": "rownames(tab) <- colnames(tab) <- colnames(contr)",
+        "error": "object 'contr' not found"
+      }
+    ],
+    "candidate_configurations": 9
+  },
+  "dat.spooner2002": {
+    "dataset": "dat.spooner2002",
+    "configurations": 14,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\")",
+        "error": null
+      },
+      {
+        "code": "mc1 <- metacont(Ne, Me, Se, Nc, Mc, Sc, data = dat.spooner2002, studlab = paste(author, year), subgroup = agegroup, print.subgroup.name = FALSE, label.e = \"Nedocromil sodium\", label.c = \"Placebo\", common = FALSE)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.steurer2006": {
+    "dataset": "dat.steurer2006",
+    "configurations": 8,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(\"RevMan5\")",
+        "error": null
+      },
+      {
+        "code": "m1 <- metagen(lnHR, selnHR, data = dat.steurer2006, studlab = paste(author, year), sm = \"HR\", random = FALSE, n.e = Ne, n.c = Nc)",
+        "error": null
+      },
+      {
+        "code": "m2 <- metagen(HR, lower = lowHR, upper = uppHR, data = dat.steurer2006, transf = FALSE, studlab = paste(author, year), sm = \"HR\", random = FALSE, n.e = Ne, n.c = Nc)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.stowe2010": {
+    "dataset": "dat.stowe2010",
+    "configurations": 14,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2, digits.se = 3)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treat = list(t1, t2, t3), n = list(n1, n2, n3), mean = list(y1, y2, y3), sd = list(sd1, sd2, sd3), studlab = study, data = dat.stowe2010, sm = \"MD\")",
+        "error": null
+      },
+      {
+        "code": "selstudy <- c(\"COMTI(E) INT-OZ\", \"LARGO\", \"COMTI(E) Nomecomt\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmeta(pw, common = FALSE, ref = \"plac\")",
+        "error": "could not find function \"netmeta\""
+      },
+      {
+        "code": "ran <- rankogram(net)",
+        "error": "could not find function \"rankogram\""
+      }
+    ],
+    "candidate_configurations": 14
+  },
+  "dat.tannersmith2016": {
+    "dataset": "dat.tannersmith2016",
+    "configurations": 3,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.tannersmith2016",
+        "error": null
+      },
+      {
+        "code": "dat$aget1 <- ave(dat$aget1, dat$studyid)",
+        "error": null
+      },
+      {
+        "code": "dat$aget2 <- ave(dat$aget2, dat$studyid)",
+        "error": null
+      },
+      {
+        "code": "dat$esid <- 1:nrow(dat)",
+        "error": null
+      },
+      {
+        "code": "V <- vcalc(vi, cluster = studyid, obs = esid, rho = 0.8, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 3
+  },
+  "dat.thompson1999": {
+    "dataset": "dat.thompson1999",
+    "configurations": 8,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "m <- metabin(ihd.exp, ihd.exp + noihd.exp, ihd.cont, ihd.cont + noihd.cont, data = dat.thompson1999, sm = \"OR\", method = \"Inverse\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 8
+  },
+  "dat.tian2009": {
+    "dataset": "dat.tian2009",
+    "configurations": 18,
+    "effects": 2,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2, label.e = \"Rosiglitazone\", label.c = \"Control\", label.left = \"Favors rosiglitazome\", label.right = \"Favors control\")",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treat = group, event = deaths, n = n, studlab = study, data = dat.tian2009, sm = \"OR\", varnames = c(\"lnOR\", \"selnOR\"))",
+        "error": null
+      },
+      {
+        "code": "mod_iv <- metabin(pw, text.common = \"IV method (common)\", text.random = \"IV method (random)\")",
+        "error": "object 'TE.common' not found"
+      },
+      {
+        "code": "mod_mh <- update(mod_iv, method = \"MH\", random = FALSE, method.incr = gs(\"method.incr\"), text.common = \"MH method\")",
+        "error": "error in evaluating the argument 'object' in selecting a method for function 'update': object 'mod_iv' not found"
+      },
+      {
+        "code": "mod_peto <- update(mod_mh, method = \"Peto\", text.common = \"Peto method\")",
+        "error": "error in evaluating the argument 'object' in selecting a method for function 'update': object 'mod_mh' not found"
+      },
+      {
+        "code": "mod_glmm <- update(mod_mh, method = \"glmm\", model = \"CM.AL\", random = TRUE, text.common = \"GLMM (common)\", text.random = \"GLMM (random)\")",
+        "error": "error in evaluating the argument 'object' in selecting a method for function 'update': object 'mod_mh' not found"
+      },
+      {
+        "code": "mm <- metaadd(mod_iv, data = mod_mh)",
+        "error": "object 'mod_iv' not found"
+      },
+      {
+        "code": "mm <- metaadd(mm, data = mod_peto)",
+        "error": "object 'mm' not found"
+      },
+      {
+        "code": "mm <- metaadd(mm, data = mod_glmm)",
+        "error": "object 'mm' not found"
+      },
+      {
+        "code": "fname <- tempfile(pattern = \"forest\", fileext = \".pdf\")",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 18
+  },
+  "dat.ursino2021": {
+    "dataset": "dat.ursino2021",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "studylab <- unique(dat.ursino2021$study)",
+        "error": null
+      },
+      {
+        "code": "colvec <- rainbow(length(studylab))",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.vanhowe1999": {
+    "dataset": "dat.vanhowe1999",
+    "configurations": 16,
+    "effects": 8,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.vanhowe1999",
+        "error": null
+      },
+      {
+        "code": "cat1 <- with(dat[dat$category == \"high-risk group\", ], escalc(measure = \"OR\", ai = sum(non.pos), bi = sum(non.neg), ci = sum(cir.pos), di = sum(cir.neg)))",
+        "error": null
+      },
+      {
+        "code": "cat2 <- with(dat[dat$category == \"partner study\", ], escalc(measure = \"OR\", ai = sum(non.pos), bi = sum(non.neg), ci = sum(cir.pos), di = sum(cir.neg)))",
+        "error": null
+      },
+      {
+        "code": "cat3 <- with(dat[dat$category == \"population survey\", ], escalc(measure = \"OR\", ai = sum(non.pos), bi = sum(non.neg), ci = sum(cir.pos), di = sum(cir.neg)))",
+        "error": null
+      },
+      {
+        "code": "all <- escalc(measure = \"OR\", ai = sum(dat$non.pos), bi = sum(dat$non.neg), ci = sum(dat$cir.pos), di = sum(dat$cir.neg))",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = non.pos, bi = non.neg, ci = cir.pos, di = cir.neg, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 16
+  },
+  "dat.viechtbauer2021": {
+    "dataset": "dat.viechtbauer2021",
+    "configurations": 20,
+    "effects": 4,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.viechtbauer2021",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"OR\", ai = xTi, n1i = nTi, ci = xCi, n2i = nCi, add = 1/2, to = \"all\", data = dat)",
+        "error": null
+      },
+      {
+        "code": "k <- nrow(dat)",
+        "error": null
+      },
+      {
+        "code": "tmp <- regplot(res.ME, xlim = c(0, 250), ylim = c(-1, 1.5), predlim = c(0, 250), shade = FALSE, digits = 1, xlab = \"Dosage (mg per day)\", psize = \"seinv\", plim = c(NA, 5), bty = \"l\", las = 1, lty = c(\"solid\", \"dashed\"), label = TRUE, labsize = 0.8, offset = c(1, 0.7))",
+        "error": "object 'res.ME' not found"
+      },
+      {
+        "code": "dosages <- sort(unique(dat$dose))",
+        "error": null
+      },
+      {
+        "code": "sav <- qqnorm(ranef(res.ME)$pred, main = \"BLUPs of the Random Effects\", cex = 1, pch = 19, xlim = c(-2.2, 2.2), ylim = c(-0.6, 0.6), las = 1)",
+        "error": "object 'res.ME' not found"
+      },
+      {
+        "code": "cols <- colorRampPalette(c(\"blue\", \"white\", \"red\"))(101)",
+        "error": null
+      },
+      {
+        "code": "h <- hatvalues(res.ME, type = \"matrix\")",
+        "error": "object 'res.ME' not found"
+      },
+      {
+        "code": "ids <- c(3, 6, 9)",
+        "error": null
+      },
+      {
+        "code": "x <- influence(res.ME)",
+        "error": "object 'res.ME' not found"
+      }
+    ],
+    "candidate_configurations": 20
+  },
+  "dat.white2020": {
+    "dataset": "dat.white2020",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.white2020",
+        "error": null
+      },
+      {
+        "code": "dat <- escalc(measure = \"ZCOR\", ri = r, ni = n, data = dat)",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  },
+  "dat.woods2010": {
+    "dataset": "dat.woods2010",
+    "configurations": 10,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "oldset <- settings.meta(digits = 2)",
+        "error": null
+      },
+      {
+        "code": "pw <- pairwise(treatment, event = r, n = N, studlab = author, data = dat.woods2010, sm = \"OR\")",
+        "error": null
+      },
+      {
+        "code": "net <- netmeta(pw)",
+        "error": "could not find function \"netmeta\""
+      }
+    ],
+    "candidate_configurations": 10
+  },
+  "dat.yusuf1985": {
+    "dataset": "dat.yusuf1985",
+    "configurations": 4,
+    "effects": 1,
+    "status": "used",
+    "preparation": [
+      {
+        "code": "dat <- dat.yusuf1985",
+        "error": null
+      },
+      {
+        "code": "tab <- \"6\"",
+        "error": null
+      }
+    ],
+    "candidate_configurations": 4
+  }
+}

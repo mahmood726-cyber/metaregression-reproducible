@@ -1,0 +1,5 @@
+__pycache__/
+.validate-work/
+.verify-*/
+PROGRESS.md
+.pytest_cache/
