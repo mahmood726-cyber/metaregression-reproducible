@@ -2,13 +2,15 @@
 import hashlib,re,tempfile
 from pathlib import Path
 import yaml
-from PIL import Image
-from make_outputs import ROOT,build,csvread
+ROOT=Path(__file__).resolve().parents[1]
+def csvread(path):
+    import csv
+    with path.open(encoding='utf-8',newline='') as stream:return list(csv.DictReader(stream))
 from checks import *
 
 def source_files(root=ROOT):
-    excluded={'.git','__pycache__','.pytest_cache','outputs','.validate-work','node_modules'}
-    return sorted(p for p in root.rglob('*') if p.is_file() and not any(x in excluded or x.startswith('.verify-') for x in p.relative_to(root).parts) and p.relative_to(root).as_posix() not in {'SOURCE_SHA256.json','PROGRESS.md'})
+    from recut_integrity import files
+    return files(root)
 def hashes(files,root):return {p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 def verify_manifest(manifest,actual):
     assert manifest and manifest==actual,'Hash/inventory mismatch'
@@ -34,6 +36,7 @@ def verify_rtable(path,rows):
         assert float(r['Tolerance'])==primary[k]['tolerance'],'Fresh R tolerance changed'
         assert math.isclose(float(r['App']),primary[k]['app'],rel_tol=1e-13,abs_tol=5e-13),'Fresh R app evidence changed'
 def verify_images(out):
+    from PIL import Image
     sizes=read(out/'sizes.json');assert set(sizes)=={f'{n}.{e}' for n in ['figure2_agreement','visual_abstract'] for e in ['png','tif']}
     for name,s in sizes.items():
         with Image.open(out/name) as im:
@@ -43,10 +46,11 @@ def verify_images(out):
     for name in ['figure2_agreement','visual_abstract']:
         with Image.open(out/f'{name}.png') as a,Image.open(out/f'{name}.tif') as b:assert a.convert('RGB').tobytes()==b.convert('RGB').tobytes(),'Paired image pixels'
 def main():
+    from make_outputs import build
     manifest=read(ROOT/'SOURCE_SHA256.json');verify_manifest(manifest,hashes(source_files(),ROOT))
     app=ROOT/'app';ap=read(app/'app-sha256.json')
     verify_manifest(ap,hashes([p for p in app.rglob('*') if p.is_file() and p.name!='app-sha256.json'],app))
-    assert sorted(ap)==read(ROOT/'results/provenance.json')['app_assets']
+    assert sorted(ap)==read(ROOT/'RECUT_PROVENANCE.json')['app_assets']
     for p in source_files():
         if p.suffix.lower() in {'.py','.r','.cjs','.js','.md','.txt','.csv','.json','.jsonl','.css','.html','.cff','.patch'}:text_safety(p)
     for p in [ROOT/'validate.R',*(ROOT/'bench').glob('*.R')]:assert not re.search(r'\$[A-Za-z]',p.read_text(encoding='utf-8')),'Non-exact R access'
@@ -73,10 +77,14 @@ def main():
     if (ROOT/'outputs/validate_R_table.csv').exists():verify_rtable(ROOT/'outputs/validate_R_table.csv',rows)
     title='Random-effects meta-regression in the browser: validation against the R package metafor'
     z=read(ROOT/'.zenodo.json');cff=yaml.safe_load((ROOT/'CITATION.cff').read_text(encoding='utf-8'))
-    assert z['title']==cff['title']==title and z['version']==cff['version']=='1.0.0' and z['license']==cff['license']=='MIT'
+    assert z['title']==cff['title']==title and z['version']==cff['version']=='1.1.0' and z['license']==cff['license']=='MIT'
     assert z['creators']==[{'name':'Ahmad, Mahmood'}] and cff['authors']==[{'family-names':'Ahmad','given-names':'Mahmood'}]
-    assert {(x['identifier'],x['relation']) for x in z['related_identifiers']}=={('https://github.com/mahmood726-cyber/allmeta','isDerivedFrom'),('10.5281/zenodo.23288388','isDerivedFrom')}
+    assert {(x['identifier'],x['relation']) for x in z['related_identifiers']}=={('https://github.com/mahmood726-cyber/allmeta','isDerivedFrom'),('10.5281/zenodo.23288388','isDerivedFrom'),(read(ROOT/'RECUT_PROVENANCE.json')['doi'],'isDerivedFrom')}
     assert any(x.get('doi')=='10.5281/zenodo.23288388' and x.get('notes')=='isDerivedFrom' for x in cff['references'])
+    assert str(cff['date-released'])=='2026-10-21'
+    assert any(x.get('version')=='1.8.0' and x.get('doi')==read(ROOT/'RECUT_PROVENANCE.json')['doi'] for x in cff['references'])
+    from recut_integrity import verify
+    verify()
     assert (ROOT/'.gitattributes').read_text().strip()=='* -text'
-    print(f'ARCHIVE PASS: {len(ap)} app hashes; {len(manifest)} source hashes; 129867/129903 non-LS checks; 36 documented differences; tables, images, coverage and metadata verified.')
+    print(f'ARCHIVE HISTORICAL-EVIDENCE PASS (candidate replay is a separate gate): {len(ap)} app hashes; {len(manifest)} source hashes; 129867/129903 non-LS checks; 36 documented differences; tables, images, coverage and metadata verified.')
 if __name__=='__main__':main()

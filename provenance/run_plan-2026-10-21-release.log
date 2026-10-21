@@ -1,0 +1,255 @@
+=== Enable local environment
+=== Archive working directory
+=== Python UTF-8
+=== Disable unrelated pytest plugin auto-loading
+=== Environment from caller; see RUN_PLAN_EXPECTED.md
+=== Default browser
+=== Dependency and target preflight
+v24.22.0
+Browser preflight: 155.0.4283.62
+R 4.6.0; metafor 5.2.1; metadat 1.6.0; jsonlite 2.0.0; digest available
+Preflight PASS: command targets, Python, Node, browser, linkedom and R packages
+=== Verify prepared integrity
+RECUT INTEGRITY PASS: 167 app files; 519 original files unchanged; extras pins and coverage verified
+=== Preserve prior outputs and scratch folders without deletion
+Preserved outputs -> .validate-work/previous/outputs.prev-2
+Preserved .validate-work/recut -> .validate-work/previous/recut.prev-2
+Preserved .verify-pytest -> .validate-work/previous/.verify-pytest.prev-2
+=== Prepare clean stage
+RECUT INTEGRITY PASS: 167 app files; 519 original files unchanged; extras pins and coverage verified
+Prepared clean wrappers and extras stage; original evidence preserved.
+=== Fresh original browser
+25/1742 app configurations
+50/1742 app configurations
+75/1742 app configurations
+100/1742 app configurations
+125/1742 app configurations
+150/1742 app configurations
+175/1742 app configurations
+200/1742 app configurations
+225/1742 app configurations
+250/1742 app configurations
+275/1742 app configurations
+300/1742 app configurations
+325/1742 app configurations
+350/1742 app configurations
+375/1742 app configurations
+400/1742 app configurations
+425/1742 app configurations
+450/1742 app configurations
+475/1742 app configurations
+500/1742 app configurations
+525/1742 app configurations
+550/1742 app configurations
+575/1742 app configurations
+600/1742 app configurations
+625/1742 app configurations
+650/1742 app configurations
+675/1742 app configurations
+700/1742 app configurations
+725/1742 app configurations
+750/1742 app configurations
+775/1742 app configurations
+800/1742 app configurations
+825/1742 app configurations
+850/1742 app configurations
+875/1742 app configurations
+900/1742 app configurations
+925/1742 app configurations
+950/1742 app configurations
+975/1742 app configurations
+1000/1742 app configurations
+1025/1742 app configurations
+1050/1742 app configurations
+1075/1742 app configurations
+1100/1742 app configurations
+1125/1742 app configurations
+1150/1742 app configurations
+1175/1742 app configurations
+1200/1742 app configurations
+1225/1742 app configurations
+1250/1742 app configurations
+1275/1742 app configurations
+1300/1742 app configurations
+1325/1742 app configurations
+1350/1742 app configurations
+1375/1742 app configurations
+1400/1742 app configurations
+1425/1742 app configurations
+1450/1742 app configurations
+1475/1742 app configurations
+1500/1742 app configurations
+1525/1742 app configurations
+1550/1742 app configurations
+1575/1742 app configurations
+1600/1742 app configurations
+1625/1742 app configurations
+1650/1742 app configurations
+1675/1742 app configurations
+1700/1742 app configurations
+1725/1742 app configurations
+1742 app configurations recorded (app)
+=== Original replay gate
+1742/1742 original configurations identical; 129867/129903 primary checks; 36 documented, 0 unexpected
+82680/91515 experimental LS checks (separate)
+=== Original UI
+4/4 UI contracts pass (app)
+=== Fresh original R
+R version 4.6.0 (2026-04-24 ucrt)
+metafor 5.2.1; metadat 1.6.0
+Recomputed: every main and experimental LS fit, prediction/band, radius formula and all 365 exact permutation tests.
+Replayed: archived browser values, SVG coordinates and structural evidence only. No browser runs.
+Fresh refits dispatched to 3 local R workers; progress: outputs/validate_R_workers.log
+25 / 1742 fresh fits completed
+50 / 1742 fresh fits completed
+75 / 1742 fresh fits completed
+100 / 1742 fresh fits completed
+125 / 1742 fresh fits completed
+150 / 1742 fresh fits completed
+175 / 1742 fresh fits completed
+200 / 1742 fresh fits completed
+225 / 1742 fresh fits completed
+250 / 1742 fresh fits completed
+275 / 1742 fresh fits completed
+300 / 1742 fresh fits completed
+325 / 1742 fresh fits completed
+350 / 1742 fresh fits completed
+375 / 1742 fresh fits completed
+400 / 1742 fresh fits completed
+425 / 1742 fresh fits completed
+450 / 1742 fresh fits completed
+475 / 1742 fresh fits completed
+500 / 1742 fresh fits completed
+525 / 1742 fresh fits completed
+550 / 1742 fresh fits completed
+575 / 1742 fresh fits completed
+600 / 1742 fresh fits completed
+625 / 1742 fresh fits completed
+650 / 1742 fresh fits completed
+675 / 1742 fresh fits completed
+700 / 1742 fresh fits completed
+725 / 1742 fresh fits completed
+750 / 1742 fresh fits completed
+775 / 1742 fresh fits completed
+800 / 1742 fresh fits completed
+825 / 1742 fresh fits completed
+850 / 1742 fresh fits completed
+875 / 1742 fresh fits completed
+900 / 1742 fresh fits completed
+925 / 1742 fresh fits completed
+950 / 1742 fresh fits completed
+975 / 1742 fresh fits completed
+1000 / 1742 fresh fits completed
+1025 / 1742 fresh fits completed
+1050 / 1742 fresh fits completed
+1075 / 1742 fresh fits completed
+1100 / 1742 fresh fits completed
+1125 / 1742 fresh fits completed
+1150 / 1742 fresh fits completed
+1175 / 1742 fresh fits completed
+1200 / 1742 fresh fits completed
+1225 / 1742 fresh fits completed
+1250 / 1742 fresh fits completed
+1275 / 1742 fresh fits completed
+1300 / 1742 fresh fits completed
+1325 / 1742 fresh fits completed
+1350 / 1742 fresh fits completed
+1375 / 1742 fresh fits completed
+1400 / 1742 fresh fits completed
+1425 / 1742 fresh fits completed
+1450 / 1742 fresh fits completed
+1475 / 1742 fresh fits completed
+1500 / 1742 fresh fits completed
+1525 / 1742 fresh fits completed
+1550 / 1742 fresh fits completed
+1575 / 1742 fresh fits completed
+1600 / 1742 fresh fits completed
+1625 / 1742 fresh fits completed
+1650 / 1742 fresh fits completed
+1675 / 1742 fresh fits completed
+1700 / 1742 fresh fits completed
+1725 / 1742 fresh fits completed
+record_present: 1742/1742 pass; max=0; tolerance=0
+no_page_error: 1742/1742 pass; max=0; tolerance=0
+fit_status: 1742/1742 pass; max=0; tolerance=0
+beta: 3483/3484 pass; max=2.10347562794e-09; tolerance=1e-09
+se: 3484/3484 pass; max=2.70337818752e-10; tolerance=1e-09
+ci_lb: 3484/3484 pass; max=2.52262763625e-10; tolerance=1e-09
+ci_ub: 3484/3484 pass; max=2.88075549463e-10; tolerance=1e-09
+tau2: 1742/1742 pass; max=5.49767106839e-11; tolerance=1e-09
+R2: 1736/1742 pass; max=4.46476967064e-08; tolerance=1e-09
+QE: 1735/1742 pass; max=1.08274887081e-07; tolerance=1e-09
+QE_p: 1740/1742 pass; max=5.09330897042e-08; tolerance=1e-09
+q: 1741/1742 pass; max=3.49613559102e-09; tolerance=1e-09
+df: 1742/1742 pass; max=0; tolerance=1e-09
+pred: 1740/1742 pass; max=2.40140707319e-09; tolerance=1e-09
+pred_se: 1742/1742 pass; max=5.11817144222e-10; tolerance=1e-09
+pi_lb: 1740/1742 pass; max=1.79075041093e-09; tolerance=1e-09
+pi_ub: 1742/1742 pass; max=7.74990258793e-10; tolerance=1e-09
+parsed_rows: 1742/1742 pass; max=0; tolerance=0
+slope_t: 1741/1742 pass; max=2.91113753636e-09; tolerance=1e-09
+slope_p_display: 1742/1742 pass; max=0; tolerance=0
+bubble_count: 1742/1742 pass; max=0; tolerance=0
+bubble_line: 5221/5226 pass; max=2.41698216996e-09; tolerance=1e-09
+bubble_ci: 10443/10452 pass; max=5.27129335869e-09; tolerance=1e-09
+bubble_radius: 69580/69580 pass; max=4.4167953332e-16; tolerance=1e-09
+exact_permutation_record: 365/365 pass; max=0; tolerance=0
+exact_permutation_status: 365/365 pass; max=0; tolerance=0
+exact_permutation_p: 365/365 pass; max=0; tolerance=1e-09
+LS_fit_status experimental: 1642/1731 pass; max=1
+LS_beta experimental: 3134/3284 pass; max=1.06551308654
+LS_betaSE experimental: 3151/3284 pass; max=0.138211337244
+LS_alpha experimental: 1898/3284 pass; max=450.733951552
+LS_alphaSE experimental: 2163/3284 pass; max=Inf
+LS_logLik experimental: 1576/1642 pass; max=1.10438055273
+LS_tau2 experimental: 63975/67200 pass; max=63.3898243343
+LS_beta_lb experimental: 3137/3284 pass; max=1.02814638665
+LS_beta_ub experimental: 3137/3284 pass; max=6.05947175329
+LS_alpha_p_display experimental: 1303/1642 pass; max=Inf
+LS_tau2_min experimental: 1597/1642 pass; max=0.449669355084
+LS_tau2_max experimental: 1481/1642 pass; max=40.9036541461
+LS experimental (fresh fits): 88194/95203 checks pass; excluded from primary exit code
+Runtime: 1537.890 seconds
+129867/129903 checks pass
+129,867/129,903 pass; 36 documented, 0 unexpected
+=== Extras numeric
+{
+  "configurations": 194,
+  "checks": 52573,
+  "passed": 52573,
+  "failed": 0,
+  "firstFailures": []
+}
+52573/52573 extras numerical checks pass
+=== Extras DOM and negative probes
+{"positiveNumeric":52573,"negativeNumeric":104952,"positiveDOM":356,"negativeDOM":251,"positivePlotValues":162,"negativePlotValues":4}
+✔ pinned LF bytes, coverage and all R numerical comparisons (1426.8228ms)
+✔ every numerical/schema/count/label/refusal comparison rejects a changed value (159.8433ms)
+✔ invalid inputs, insufficient studies and singular designs refuse explicitly (2.5014ms)
+✔ DOM output and JSON export on every R configuration; numeric/label/refusal mutations fail (11254.0788ms)
+✔ documented divergences: mixed-scale designs metafor refuses from eigen rounding noise; the engine fits them as gate-disabled metafor does (46.8126ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12941.377
+=== Extras browser
+52767/52767 extras browser panel checks pass; input/result state restored; no page errors or missing resources
+=== Historical outputs
+PASS: 40/40 paper-value assertions; 129867/129903 non-LS checks; 36 documented differences; LS 82680/91515 (experimental).
+=== Safeguards
+...................................................                      [100%]
+51 passed in 5.27s
+=== R safeguard plant check on the uncorrupted table
+R GUARD PLANT PASS: uncorrupted table triggers the expected negative-test failure
+=== Archive verification
+PASS: 40/40 paper-value assertions; 129867/129903 non-LS checks; 36 documented differences; LS 82680/91515 (experimental).
+RECUT INTEGRITY PASS: 167 app files; 519 original files unchanged; extras pins and coverage verified
+ARCHIVE HISTORICAL-EVIDENCE PASS (candidate replay is a separate gate): 167 app hashes; 747 source hashes; 129867/129903 non-LS checks; 36 documented differences; tables, images, coverage and metadata verified.
+=== Executed replay gates
+EXECUTED REPLAY GATES PASS: 1742/1742; 129867/129903; 52573/52573; 52767/52767; UI 4/4
+RECUT INTEGRITY PASS: 167 app files; 519 original files unchanged; extras pins and coverage verified
+=== Execution plan complete; allmeta v1.8.0 1cb3f84 replay gates passed

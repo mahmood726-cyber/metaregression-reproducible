@@ -1,8 +1,63 @@
 # Random-effects meta-regression in the browser: validation against the R package metafor
 
-Version 1.0.0. Creator: Mahmood Ahmad. MIT-licensed archive code.
+Version 1.1.0; release date 2026-10-21. Creator: Mahmood Ahmad. MIT-licensed archive code.
 
-This archive validates allmeta at **e47acf19f13d36feac52fc414d3c9782012155cc** (PR #89), included in allmeta [v1.2.1](https://doi.org/10.5281/zenodo.23288388) and [v1.3.0](https://doi.org/10.5281/zenodo.23330389). The reference environment is **R 4.6.0, metafor 5.2-1 and metadat 1.6-0** (R package-version strings 5.2.1 and 1.6.0). Release identifiers are supplied provenance; app bytes are verified against the specified local git objects.
+## What's new in v1.1.0
+
+The release run dated **2026-10-21**, on allmeta v1.8.0
+**1cb3f8409c7af75ed41f7e1811f9c502f900fc79** (1cb3f84), passed the runner gates.
+The allmeta release DOI is **10.5281/zenodo.23515177** (concept DOI
+10.5281/zenodo.20516880). Release identifiers and run date were supplied in
+TASK_finalize.md; the local v1.8.0 tag and HEAD match that commit.
+
+PR #149 adds separate multiple-moderator ML validation: likelihood-ratio
+comparisons, AIC/BIC and bubble fitted-mean confidence bands against desktop
+metafor 5.2-1. The original corpus, R references, expected values and tolerances
+are unchanged. Results below are transcribed from
+[the preserved release log](provenance/run_plan-2026-10-21-release.log).
+
+| Release-run gate | Observed result |
+|---|---|
+| Original browser equality | 1,742/1,742 configurations identical |
+| Original primary checks, including fresh R refits | 129,867/129,903; 36 documented differences, 0 unexpected |
+| Original UI | 4/4 contracts pass |
+| Exact permutation records/status/p-values | 365/365 in each group |
+| Extras numerical checks | 52,573/52,573 across 194 configurations |
+| Extras browser-panel checks | 52,767/52,767; restored state, no page errors or missing resources |
+| Extras DOM/negative-probe suite | 5/5 tests pass |
+| Python/R safeguards | 51/51 tests pass |
+| Historical paper-value assertions | 40/40 |
+| Experimental LS, historical replay | 82,680/91,515 |
+| Experimental LS, fresh release R fits | 88,194/95,203; excluded from primary exit code |
+
+The browser-panel total includes the extras numerical checks; do not add those
+denominators. Experimental location-scale remains separate and does not establish
+parity. validation-plus/README.md describes the preserved protocol and three
+documented mixed-scale divergences.
+
+Run RUN_PLAN.cmd in Windows cmd from this archive directory.
+RUN_PLAN_EXPECTED.md documents dependencies, environment variables and all gates.
+No dependencies are installed. Logs/results go to outputs/recut/; browser servers
+bind only to http://127.0.0.1:8000 and are stopped by their owning wrapper.
+
+RECUT_PROVENANCE.json identifies this release. Historical identity remains in
+results/provenance.json, expected/paper_values.json and
+validation-original/SOURCE_SHA256-v1.0.0.json. To finalize checkout line endings
+against release Git blobs, run ../FINAL_BLOBS.cmd from the containing workspace.
+COPY_MAP.json beside that command records every current upstream copy; the Python
+helper checks the release tag, writes blob bytes without text conversion, then
+regenerates and verifies manifests using this archive's own scripts.
+
+    python analysis/recut_integrity.py verify
+
+The preserved runtime receipts retain their original source-manifest stamp.
+Metadata finalization changes SOURCE_SHA256.json; it does not retroactively
+re-stamp a prior execution. RUN_PLAN.cmd can produce a new execution for the final
+manifest, and verify --executed continues to reject stale receipts.
+
+## Historical v1.0.0 validation
+
+The v1.0.0 archive validated allmeta at **e47acf19f13d36feac52fc414d3c9782012155cc** (PR #89), included in allmeta [v1.2.1](https://doi.org/10.5281/zenodo.23288388) and [v1.3.0](https://doi.org/10.5281/zenodo.23330389). The reference environment is **R 4.6.0, metafor 5.2-1 and metadat 1.6-0** (R package-version strings 5.2.1 and 1.6.0). Release identifiers are supplied provenance; app bytes are verified against the specified local git objects.
 
 Excluding experimental location-scale (LS), **129,867 of 129,903 checks pass**, versus **115,139** before the fixes. There are **36 documented conditioning differences across 14 configurations**, including eight using year as moderator. This is not an all-pass claim. The corpus screens **114 metadat datasets**, retaining **223 effect definitions and 1,742 configurations from 111 datasets**.
 
@@ -17,7 +72,7 @@ metafor::rma(yi, vi, mods = ~x, data = d, method = "PM", test = "adhoc",
 metafor::permutest(fit, exact = TRUE)
 ```
 
-The browser implements an intercept and **one numeric moderator**, Paule–Mandel heterogeneity, and floored Knapp–Hartung inference, `q=max(1,RSS/(k-2))`. The matching metafor test is `adhoc`, not `knha`. Main fitting accepts k≥3; permutation and LS are offered at k≥4. Alternate estimators, multiple moderators, factors and dependence models are outside this validation.
+The original validation covers an intercept and **one numeric moderator**, Pauleâ€“Mandel heterogeneity, and floored Knappâ€“Hartung inference, `q=max(1,RSS/(k-2))`. The matching metafor test is `adhoc`, not `knha`. Main fitting accepts kâ‰¥3; permutation and LS are offered at kâ‰¥4. Alternate estimators, multiple moderators, factors and dependence models are outside this validation.
 
 All metadat catalogue entries were screened. Inputs come from supplied effects/variances, documented escalc recipes and schema-checked supplements. Each resulting effect frame considers every eligible varying numeric column; known identifiers and yi/vi/sei outputs are excluded. Complete cases must have finite yi, vi and moderator values, positive variances and at least three rows. Numeric-looking strings are converted only when the whole nonmissing column is numeric. `data/effect-recipes.json`, `dataset-audit-final.json`, `moderator-exclusions.json` and `configuration-exclusions.json` preserve mappings and every exclusion reason; `bench/docs/` preserves package documentation/examples.
 
@@ -25,7 +80,7 @@ The final source audit removes duplicate complete-case triples, an incomplete pe
 
 This deliberately broad **computational stress test is not a recommendation to use every numeric variable as a moderator**. It includes outcome-related predictors, numerical encodings and dependent/multi-arm rows. It does not validate clinical interpretations or independence assumptions. Labels such as `dat.bcg:1` are frame row addresses, not source trial identifiers. The archive validates installed-package values and recipes, without re-extracting publications.
 
-## Comparisons and remaining differences
+## Historical comparisons and remaining differences
 
 | Group | Passed after | Checks |
 |---|---:|---:|
@@ -36,17 +91,17 @@ This deliberately broad **computational stress test is not a recommendation to u
 | Non-LS total | 129,867 | 129,903 |
 | Experimental LS, separate | 82,680 | 91,515 |
 
-Estimates, SEs, confidence/prediction limits and statistics use `abs(app-reference)/max(1,abs(reference)) <= 1e-9`. P-values use absolute differences; displayed slope p-values must match the reference rounded to three decimals exactly. Intercept t/p, I², H² and QM are retained in R evidence but are not counted as exposed app outputs. Structural checks cover record presence, page errors, fit status and parsed rows.
+Estimates, SEs, confidence/prediction limits and statistics use `abs(app-reference)/max(1,abs(reference)) <= 1e-9`. P-values use absolute differences; displayed slope p-values must match the reference rounded to three decimals exactly. Intercept t/p, IÂ², HÂ² and QM are retained in R evidence but are not counted as exposed app outputs. Structural checks cover record presence, page errors, fit status and parsed rows.
 
 Bubble checks cover the number of circles, every radius and the first/middle/last fitted-line and both confidence-band edges. SVG y coordinates are inverted using the original plotting transform. Radius is `4+10*(1/vi)/max(1/vi)`; bubble area is not proportional to inverse variance and random-effects weights do not set size. Plot-count checks are exact; other plot quantities use 1e-9.
 
-The 36 differences range from approximately **1.0e-9 to 1.1e-7**. `outputs/table2_differences.csv` identifies each configuration, quantity and vector index, retains app/reference/difference values, and adds the centered-refit difference. Centered/scaled refits use `z=(x-mean(x))/sd(x)` and `tol=threshold=1e-15`, mapping coefficients and covariance back to the original scale. All recorded centered diagnostics agree within **3e-11**. Bubble diagnostics reconstruct bands from those fitted coefficients, tau², q and the design. Centered results diagnose conditioning; they do not replace the prespecified raw reference or erase its failures.
+The 36 differences range from approximately **1.0e-9 to 1.1e-7**. `outputs/table2_differences.csv` identifies each configuration, quantity and vector index, retains app/reference/difference values, and adds the centered-refit difference. Centered/scaled refits use `z=(x-mean(x))/sd(x)` and `tol=threshold=1e-15`, mapping coefficients and covariance back to the original scale. All recorded centered diagnostics agree within **3e-11**. Bubble diagnostics reconstruct bands from those fitted coefficients, tauÂ², q and the design. Centered results diagnose conditioning; they do not replace the prespecified raw reference or erase its failures.
 
 LS is experimental and **does not agree with metafor**: for example, alpha coefficients pass 1,893/3,280 checks. Its estimates/SEs/CIs, log likelihood and variances use 1e-6, with displayed scale-slope p checked at three decimals. The historical LS oracle uses ML and `scale=~x`; 91 offered configurations have R errors/refusals, including one timeout. Local/boundary optima, identifiability and curvature remain limitations. Explicit undefined SE values can match explicit nulls; missing keys, NaN, Infinity, wrong types and unmatched nulls cannot pass. The page's literal `--` p display is recognized only for its undefined experimental scale inference.
 
-The measured fresh R run reports 82,672/89,671 experimental LS checks passing. It has 92 errors/refusals versus 91 historically: dat.moura2021/e1/ri (reached elapsed time limit). This additional execution timeout changes the LS denominator; it does not indicate improved agreement. The paper tables retain the historical 82,680/91,515 result. See outputs/validate_R_LS_review.json and validate_R_LS_errors.csv. The primary gate remains 129,867/129,903, with 36 documented and zero unexpected failures.
+The release R run dated 2026-10-21 on allmeta 1cb3f84 reports **88,194/95,203** experimental LS checks passing, with alpha coefficients **1,898/3,284**. Its measured runtime was **1,537.890 seconds**. These observed figures replace the obsolete earlier fresh-run summary; they do not replace the historical paper result of 82,680/91,515. The release log does not report an aggregate error/refusal count, so the earlier 92-refusal and additional-timeout claims are not carried forward. See provenance/run_plan-2026-10-21-release.log and outputs/validate_R_LS_table.csv. The primary gate remains 129,867/129,903, with 36 documented and zero unexpected failures.
 
-Monte Carlo permutation p-values are not compared because the app and R use different RNGs. Exact permutations alone are compared, for every k=4–7 configuration. R can collapse repeated permutations; equal multiplicities preserve the p-value.
+Monte Carlo permutation p-values are not compared because the app and R use different RNGs. Exact permutations alone are compared, for every k=4â€“7 configuration. R can collapse repeated permutations; equal multiplicities preserve the p-value.
 
 ## Five faults corrected in PR #89
 
@@ -58,9 +113,11 @@ Monte Carlo permutation p-values are not compared because the app and R use diff
 
 `bench/fix.patch` and `bench/RESULTS.md` preserve the evidence. Table 1 regenerates every quantity's before/after count; the non-LS total improves from 115,139 to 129,867. The historical UI contract improved from 2/3 to 3/3; it is distinct from the numerical denominator.
 
-For **dat.bcg, log RR on absolute latitude**, the R slope is **−0.0286 (95% CI −0.0485 to −0.0086; p=0.009)**, tau² **0.142**, R² **55.3%**, and QE **30.73 (11 df, p=0.001)**. These rounded values are checked against full-precision source records, not inserted as computed outputs.
+For **dat.bcg, log RR on absolute latitude**, the R slope is **âˆ’0.0286 (95% CI âˆ’0.0485 to âˆ’0.0086; p=0.009)**, tauÂ² **0.142**, RÂ² **55.3%**, and QE **30.73 (11 df, p=0.001)**. These rounded values are checked against full-precision source records, not inserted as computed outputs.
 
 ## Reproduce
+
+For the complete v1.1.0 recut use RUN_PLAN.cmd above. The standalone R command below replays historical browser observations; its release interpretation is supported by the recorded fresh browser equality gate.
 
 From this archive root, using already installed R packages metafor, metadat, jsonlite and digest:
 
@@ -70,7 +127,7 @@ Rscript validate.R
 
 Set standard `R_LIBS_USER`/`R_LIBS` variables to existing libraries if needed. The validator prioritizes `R_LIBS_USER` and fails loudly unless the paper's R and package versions load. No packages are installed and no network is used. It SHA-256-checks an exact input manifest before fitting every main configuration and running all 365 exact permutation tests. Model quantities, predictions, bubble reference values and exact p-values are freshly computed; archived app outputs, SVG coordinates and structural evidence are replayed. Experimental LS fits are also freshly recomputed with the original ML model, maxiter=10000 and 60-second per-fit limit; they are reported separately and their numerical discrepancies never affect the primary exit status. Three local R worker processes perform the fresh fits; progress is recorded in outputs/validate_R_workers.log. Historical publication LS totals remain tied to the archived run, since fresh timeout or optimizer behavior can differ. A browser is not run by this command.
 
-It prints a per-quantity table and `129867/129903 checks pass`, followed by `129,867/129,903 pass; 36 documented, 0 unexpected`, and writes `outputs/validate_R_table.csv`, `validate_R_LS_table.csv`, `validate_R_fresh.rds` and `validate_R_runtime.json`. Success requires exactly the documented failing keys in `expected/documented_differences.json`; any unexpected failure, vanished/changed documented failure, duplicate or coverage mismatch exits nonzero. The measured runtime and command outcome are in `REPORT.md` outside this archive.
+It prints a per-quantity table and `129867/129903 checks pass`, followed by `129,867/129,903 pass; 36 documented, 0 unexpected`, and writes `outputs/validate_R_table.csv`, `validate_R_LS_table.csv`, `validate_R_fresh.rds` and `validate_R_runtime.json`. Success requires exactly the documented failing keys in `expected/documented_differences.json`; any unexpected failure, vanished/changed documented failure, duplicate or coverage mismatch exits nonzero. The release runtime and command outcome are preserved in provenance/run_plan-2026-10-21-release.log.
 
 With Python and the packages listed in `analysis/requirements.txt`:
 
@@ -80,9 +137,9 @@ python -m pytest -q analysis/test_safeguards.py
 python analysis/verify_archive.py
 ```
 
-Output generation recreates both tables, agreement and visual-abstract PNG/TIFF pairs, `sizes.json`, evidence-linked `numbers.json` and `reproduction_report.md`. Figures are 300 dpi, 170 mm wide, with text ≥8 pt. Expected paper values are assertions only. The verifier checks source inventory/hashes, exact journal filtering, input coverage, tables, reproducibility, paired image pixels, metadata and fresh R results when present. It permits `.git` metadata.
+Output generation recreates both tables, agreement and visual-abstract PNG/TIFF pairs, `sizes.json`, evidence-linked `numbers.json` and `reproduction_report.md`. Figures are 300 dpi, 170 mm wide, with text â‰¥8 pt. Expected paper values are assertions only. The verifier checks source inventory/hashes, exact journal filtering, input coverage, tables, reproducibility, paired image pixels, metadata and fresh R results when present. It permits `.git` metadata.
 
-`app/` contains byte-identical git objects for every page dependency, including all four fetchable glossary languages, with `app-sha256.json`. Serve it at `http://127.0.0.1:8000` and open `/meta-regression/index.html`. `bench/` retains the historical scripts with local paths replaced and exact R field access; see its README for replay instructions. `node bench/ui_smoke.cjs` replays the original browser E2E contract on absolute local file URLs, using an installed Playwright (set PLAYWRIGHT_MODULE if it is not locally resolvable). Four checks cover k=3 and k=4 fit/plot behavior, refusal-cache clearing, and absence of page errors; HTTP(S) requests are blocked. The BCG screenshot is retained. All glossary files are separately covered by the static asset and hash checks. Nothing was committed, pushed or deployed.
+app/ contains the supplied release checkout assets, with app-sha256.json and dependency edges in RECUT_PROVENANCE.json. FINAL_BLOBS.cmd verifies and materializes their exact release Git blobs; checkout CRLF bytes must not be mistaken for Git-blob identity. The upstream embedded build stamp is preserved unchanged and is not used as the release identity. To inspect the app, run `python -m http.server 8000 --bind 127.0.0.1 --directory app` and open http://127.0.0.1:8000/meta-regression/index.html. `bench/` retains the historical scripts with local paths replaced and exact R field access; see its README for replay instructions. `node bench/ui_smoke.cjs` replays the original browser E2E contract on absolute local file URLs, using an installed Playwright (set PLAYWRIGHT_MODULE if it is not locally resolvable). Four checks cover k=3 and k=4 fit/plot behavior, refusal-cache clearing, and absence of page errors; HTTP(S) requests are blocked. The BCG screenshot is retained. All glossary files are separately covered by the static asset and hash checks. For recut execution, the wrapper uses HTTP and writes UI results under outputs/recut, preserving results/ui-smoke.json. No commit, push or deployment is performed by the preparation or runner.
 
 | Content | Static or dynamic | Evidence / transformation |
 |---|---|---|
@@ -94,4 +151,4 @@ Output generation recreates both tables, agreement and visual-abstract PNG/TIFF 
 | Browser outputs in R command | Historical replay | Archived result records, clearly labelled |
 | Hashes | Dynamic integrity evidence | Assembled source bytes; not scientific certification |
 
-MIT covers archive code and does not replace upstream data/documentation rights. Package documentation and original attribution remain with the evidence. No manuscript drafts, machine-specific paths, secrets or release-certification claims are included.
+MIT covers archive code and does not replace upstream data/documentation rights. Package documentation and original attribution remain with the evidence. No manuscript drafts or release-certification claims are included. The privacy audit in RECUT_NOTES.md records unresolved upstream-copy exceptions; this archive is not cleared for publication until they are resolved.

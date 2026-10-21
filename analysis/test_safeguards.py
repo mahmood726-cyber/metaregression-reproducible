@@ -89,10 +89,16 @@ pins<-lapply(0:35,function(i)list(configuration='a',quantity='q',index=i))
 tab<-data.frame(configuration='a',quantity='q',index=0:35,Result='FAIL')
 check_documented(tab,pins)
 reject(check_documented(tab[-1,],pins))
-tab[['index',exact=TRUE]][1]<-99;reject(check_documented(tab,pins))
+tab$index[1]<-99;reject(check_documented(tab,pins))
 cat('R safeguard negative tests PASS\\n')
 '''
-    proc=subprocess.run(['Rscript','-e',code],cwd=ROOT,capture_output=True,text=True)
+    script=tempfile.NamedTemporaryFile(suffix='.R',delete=False,mode='w',encoding='utf-8',newline='')
+    try:
+        with script:
+            script.write(code)
+        proc=subprocess.run(['Rscript',script.name],cwd=ROOT,capture_output=True,text=True)
+    finally:
+        Path(script.name).unlink()
     assert proc.returncode==0,proc.stdout+proc.stderr
 
 @pytest.mark.parametrize('kind',['metafor','R'])

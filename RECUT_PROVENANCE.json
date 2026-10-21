@@ -1,0 +1,2091 @@
+{
+  "archive_version": "1.1.0",
+  "allmeta_version": "1.8.0",
+  "commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+  "doi": "10.5281/zenodo.23515177",
+  "preparation_status": "release run passed on 2026-10-21 after coordinator Git-blob recopy and upstream-pin correction; provenance and dates corrected",
+  "candidate_commit": "d04b0a9",
+  "candidate_commit_evidence": "TASK.md supplied candidate abbreviation; Git not executable in sandbox",
+  "original_provenance": "results/provenance.json",
+  "original_manifest": "validation-original/SOURCE_SHA256-v1.0.0.json",
+  "app_assets": [
+    "hub/app-style.css",
+    "hub/shared/a11y-landmarks.js",
+    "hub/shared/analysis-lifecycle.js",
+    "hub/shared/axis-controls.js",
+    "hub/shared/csv-upload.js",
+    "hub/shared/glossary.ar.json",
+    "hub/shared/glossary.es.json",
+    "hub/shared/glossary.json",
+    "hub/shared/glossary.zh.json",
+    "hub/shared/plot-export.js",
+    "hub/shared/reset-undo.js",
+    "hub/shared/results-export.js",
+    "hub/shared/tooltips.js",
+    "hub/shared/url-state.js",
+    "hub/shared/vendor/jspdf.min.js",
+    "meta-regression/index.html",
+    "meta-regression/plus-engine.js",
+    "meta-regression/plus-ui.js",
+    "meta-regression/plus.css",
+    "meta-regression/validate/contract.js",
+    "meta-regression/validate/plus-adapter.js",
+    "meta-regression/validate/plus-pins.js",
+    "meta-regression/validate/plus/candidates.json",
+    "meta-regression/validate/plus/corpus.json",
+    "meta-regression/validate/plus/divergences.json",
+    "meta-regression/validate/plus/reference.json",
+    "r-shiny/shinylive/webr/R.js",
+    "r-shiny/shinylive/webr/R.wasm",
+    "r-shiny/shinylive/webr/libRblas.so",
+    "r-shiny/shinylive/webr/libRlapack.so",
+    "r-shiny/shinylive/webr/library.data.gz",
+    "r-shiny/shinylive/webr/library.js.metadata",
+    "r-shiny/shinylive/webr/packages/Matrix/Matrix_1.7-5.tgz",
+    "r-shiny/shinylive/webr/packages/lattice/lattice_0.22-9.tgz",
+    "r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz",
+    "r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz",
+    "r-shiny/shinylive/webr/packages/metafor/metafor_4.8-0.tgz",
+    "r-shiny/shinylive/webr/packages/nlme/nlme_3.1-169.tgz",
+    "r-shiny/shinylive/webr/packages/numDeriv/numDeriv_2016.8-1.1.tgz",
+    "r-shiny/shinylive/webr/packages/pbapply/pbapply_1.7-4.tgz",
+    "r-shiny/shinylive/webr/repo/bin/emscripten/contrib/4.5/digest_0.6.39.tgz",
+    "r-shiny/shinylive/webr/repo/manifest.json",
+    "r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf",
+    "r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/doc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/doc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations/DESCRIPTION",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/share.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/lib/R/share.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Bold.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-BoldItalic.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Bold.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Regular.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Bold.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-BoldItalic.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Italic.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Regular.ttf",
+    "r-shiny/shinylive/webr/vfs/usr/share/gdal.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/share/gdal.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/share/proj.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/share/proj.js.metadata",
+    "r-shiny/shinylive/webr/vfs/usr/share/udunits.data.gz",
+    "r-shiny/shinylive/webr/vfs/usr/share/udunits.js.metadata",
+    "r-shiny/shinylive/webr/vfs/var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le32d8.cache-9",
+    "r-shiny/shinylive/webr/vfs/var/cache/fontconfig/CACHEDIR.TAG",
+    "r-shiny/shinylive/webr/webr-worker.js",
+    "r-shiny/shinylive/webr/webr.mjs",
+    "shared/alm-validate.js",
+    "shared/app-flow.js",
+    "shared/autosave.js",
+    "shared/build-info.js",
+    "shared/canonical-datasets.js",
+    "shared/citation.js",
+    "shared/forced-colors.css",
+    "shared/hero-examples.js",
+    "shared/location-scale.js",
+    "shared/ma-core.js",
+    "shared/ma-studies-v1.js",
+    "shared/permutest.js",
+    "shared/toast.js",
+    "shared/truthcert-export.js",
+    "shared/truthcert-ui.js",
+    "shared/webr-runner.js"
+  ],
+  "app_changes": [
+    {
+      "path": "app/hub/app-style.css",
+      "change": "changed",
+      "old_sha256": "905dba05ebb123f3c3baec8b5691830b48eb9c9092648f5cba71be0efc6a12a6",
+      "sha256": "475254903d40eebe241574975f1ddff13808c8ad478c17137fda449a3952361f"
+    },
+    {
+      "path": "app/hub/shared/a11y-landmarks.js",
+      "change": "changed",
+      "old_sha256": "f7a89f3c72dd80f666d16d52592a7e60f45fba62efc9dfeb4c2faf7fb0e8b5a2",
+      "sha256": "a9b35c71c500b0fe4e5a080f23c9dbb11c5462663a0d44e4557f782149e5f8ea"
+    },
+    {
+      "path": "app/hub/shared/analysis-lifecycle.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "bdae7a0d966e9093b4234e697a8474e3e1757cde804f5893a880a0f9b2b4d9f7"
+    },
+    {
+      "path": "app/hub/shared/axis-controls.js",
+      "change": "changed",
+      "old_sha256": "7a5dd1033ee1b348eaedbffd2e14fdf8b1bd1d24318ab9e680c442e693613291",
+      "sha256": "1620bdc94620df10a41abe91c388de6a91f03367dd3719cb77ce2776ab553806"
+    },
+    {
+      "path": "app/hub/shared/csv-upload.js",
+      "change": "changed",
+      "old_sha256": "0f254f79294d154e66a4c8b700c7c021ea7b8d60a81bbb4d4286a2aee4544780",
+      "sha256": "6ce4702db911d2c193da4b775a10f8b748d4901ddcc98f0830bab7bd48db5384"
+    },
+    {
+      "path": "app/hub/shared/glossary.ar.json",
+      "change": "changed",
+      "old_sha256": "918cfd779291fc1df829d58f6f92f30f520c70206c59a2df3176d7a26752f533",
+      "sha256": "0efb4eb408dc876da85c836b46d4fc6a92a43220027e1daf9cb5e18eddfff676"
+    },
+    {
+      "path": "app/hub/shared/glossary.es.json",
+      "change": "changed",
+      "old_sha256": "33038d3067deea675d67ed5caaa1c6e9a760a6a60821e8386a6e7c41ad17988b",
+      "sha256": "d529dd603967580e038d5b272c794822de934bacb2363a36e3ad7d6b36df82d1"
+    },
+    {
+      "path": "app/hub/shared/glossary.json",
+      "change": "changed",
+      "old_sha256": "ff96263d3e828de5f681a814418487257dfc5625417c1aed8e87a7e3339672d8",
+      "sha256": "16e134407092859538b7c1215b8f40ae5c6ce8c4bae49c4cf953cf7260a228ce"
+    },
+    {
+      "path": "app/hub/shared/glossary.zh.json",
+      "change": "changed",
+      "old_sha256": "d04e7d3e3acbeceb51b8c1d7c3dcc3a7f762266c7c003e7700a19095472504ea",
+      "sha256": "896ec12cd34bfd7d2a37ec45b5318e716328d9a614b71aec25638515f0457034"
+    },
+    {
+      "path": "app/hub/shared/plot-export.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "7533db659c89b328f20252fc2deaa1272d8473d00052d7b91a9732c24ee382cc"
+    },
+    {
+      "path": "app/hub/shared/reset-undo.js",
+      "change": "changed",
+      "old_sha256": "467e815bc5129c09125f736c61eb0a0e12b8375b7d63d868921ec6224e028ce5",
+      "sha256": "0ef224c3e8a53dca6364cdbdfa8a0f24dc5e0e8805180651781106e0a2af1ee8"
+    },
+    {
+      "path": "app/hub/shared/results-export.js",
+      "change": "changed",
+      "old_sha256": "1f8f2094425bae641077543017fa0bcdc85128b9aef4d7edfbb8a0023cade85f",
+      "sha256": "8fd30b46fc6e0d09b98326f69edf14757659dbcf2cf1434ca8c5de60c057cc71"
+    },
+    {
+      "path": "app/hub/shared/tooltips.js",
+      "change": "changed",
+      "old_sha256": "bbd9b0e117877c089549208d4d2b2d6dde0aa9c7ff8c02e3c035c22ee1e678e3",
+      "sha256": "cd9fd2d82a5d5402915737de9aaef7caa0f506ca0550e0f18f078c67b3078393"
+    },
+    {
+      "path": "app/hub/shared/url-state.js",
+      "change": "changed",
+      "old_sha256": "377d7d697909bb7a4fd85a68201279bcbc5a8876087eda422ca012f05bddc5b6",
+      "sha256": "bad4f304ff5e83b03561b4984c51b3274f9b37721b4d955df4629cb660e2894f"
+    },
+    {
+      "path": "app/hub/shared/vendor/jspdf.min.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "98ccf17aa10c20bb1301762618fcc9b6ab3a4e7f26b6071d64d0b41154df3875"
+    },
+    {
+      "path": "app/meta-regression/index.html",
+      "change": "changed",
+      "old_sha256": "442501a3bd7086239ad9d5abf191d7c5a6cc4b660af3cf2be1e34d6275eaa16c",
+      "sha256": "263d040ca4bd53d7125181b00687c78be3630efb41ba4573da0d8b95c81ed067"
+    },
+    {
+      "path": "app/meta-regression/plus-engine.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "9b002c0594ab787c403ebb606a83f6d58d1492d091b1a68c9d5b117e719723b3"
+    },
+    {
+      "path": "app/meta-regression/plus-ui.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "d56667f6ba8f6ea0781f852cd9c0d9958b5ade8fb501c7da38a888d0ea35156f"
+    },
+    {
+      "path": "app/meta-regression/plus.css",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "85f2fca5634096ebb5299b451e00287ee2a88eb6a833269a7af9a48d7710374b"
+    },
+    {
+      "path": "app/meta-regression/validate/contract.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "603d66b91155cf2fe14964b0a49c9660913d2a02d065b5ea7e170daf9248d227"
+    },
+    {
+      "path": "app/meta-regression/validate/plus-adapter.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "dcaecb299ea7169cb44cb395dc5cfef82aac8564b3408f7982d8a90ea7e183ec"
+    },
+    {
+      "path": "app/meta-regression/validate/plus-pins.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "62b0e19d83f8ee87cbef1a72eccf026e47916d3a28032a6b6c864c2fd529f9cd"
+    },
+    {
+      "path": "app/meta-regression/validate/plus/candidates.json",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "736a2e4b9a65ee7352a7b8f96776c07d1f88c41de743d6ac72726a5b32a462f8"
+    },
+    {
+      "path": "app/meta-regression/validate/plus/corpus.json",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "27e5ba13f2e544300cfb8ed01635864f09838ace3645c87b87b083a2f7f293ae"
+    },
+    {
+      "path": "app/meta-regression/validate/plus/divergences.json",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "a1f52648e03c224cbba2ed47270abe68cc356141f334d84156170e151da45375"
+    },
+    {
+      "path": "app/meta-regression/validate/plus/reference.json",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1afccbdba803ba655c48ded8631a2137ba6c3bbb7c2a1f2aae315959645a8c2c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/R.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "6be6efac86d73a8b27fcd05a69a52f335bd0dee1f6bca30bdb3e61cef0934bc3"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/R.wasm",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "b2e87bafe6245e72b50044dd5678303981491c275a393a30dcaec903dea8a500"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/libRblas.so",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "d4e703f3ae2783d2f63464fe49a9db44e4db48adedd042b54a5a2c74b7f67825"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/libRlapack.so",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "aedceeaf3bae382dc242afd9c84f9169c8ebaa8cc8130e0e7e4167be5a2a5244"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/library.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "e085881f95d3adc7aa9c987914f8fcc3134dfdaa11f54f1f8f866933df97dd57"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/library.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "732f130e9f48966c45e8f1365d497ec4609483699c54992ce6d8038e5b69ba6b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/Matrix/Matrix_1.7-5.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "408f6f9226d1849eddefbd00c866c4836ccc1803e6ab5bdfc107d5170585685c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/lattice/lattice_0.22-9.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "ba5d01351d5a75dbf9193c03ba33ef7141dc27aea835c9dc9e0b1c41544b0822"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0309e3ecbf1363c09f7434c3a02275f98436367d57f20f448090d73bc507945e"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "581a0d76b2c0b4a22baa017fee61750740f7a13a22c5a546971d5a64f410a7b2"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/metafor/metafor_4.8-0.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "746f8ab2d0d85b03a3f07ead0340193a04defd1f871dd6511dd758a9f2ff28b0"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/nlme/nlme_3.1-169.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "cb1b992c11ec78fe4529441ab6e684c3a9929661b86890cec3beff7f45ebdb61"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/numDeriv/numDeriv_2016.8-1.1.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "d4a872a6f04de8b74fbc24e479152916f87618295b092930f00ec3ce83b7f866"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/pbapply/pbapply_1.7-4.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "a256290bd68d1e73b129c9483c7746d71c32e62a0cc25bfe595ce7b6a8b495ff"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/repo/bin/emscripten/contrib/4.5/digest_0.6.39.tgz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3aaa3c2acf4af9fd93c78db33878aaff91568da71c7de14e30a6baafcac0c6b9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/repo/manifest.json",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "91fb1a0bddcecb705532f3efb1cc7876beda77a35ed16eb2de593fb2ea276fa2"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "21628618ce895c1dcb48d2f43e6e8649d0cfd1231e40c001675369b09d9839a5"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5fc8be6baf0a59d51dad1c1c3377bf4a126015dc457722b595b2eb331b17254c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/doc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "887c1c88e741e0735974c43bd75cfe7d623f3b3e0f85990bde05334986362b7e"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/doc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "121b5bcf8bbbeba471bdfee6df4d19d7215952641b8e86bc940ce6fa4dec4c1c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "772f6b5678ba0221f6fb59f142ebe5fe619988b5e1f0fcb1114a9e9f505feacf"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5208f08043360751b7e0342642488f7db073c41579bbfa24f06fa3a1b7654059"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "8cbb1c69cc48b0b5b27aa8dc5b5a84418b2b6f602809d55debb57e779e6e36d4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3efc40d19d93ff566f4bb97db3012dcebc0dddea0929de4e0787ae50d4fbb2d9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3a931d021aa201ef85f4abc0160f4441947deea8269c2d9e0eee18453f4a5a20"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "c0613c848b7d060ad65edc45dbf4f01cc5ba914288973b6bf723cccf5f02a00a"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "e475924a020c0522c2a7b8d94616b43de6938e91550a58456c6d1fa46fbc95dc"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "aa4ca31c73fe57a0e04bfce03128a874faf28e6804efc9ec23c5b51acd69b3c0"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "8fdf27e1bd58c64af2846d573ac602cddbe01c855d801b0350ecb200965abd4a"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "af41a91b9b635578bbccdfea0648db216d331762be2044c077044d0cd00847aa"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "325d74237ed06403e6ce21bb0bb205f36c790c44afe6b9dc66f33250e37a72b7"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "c32ed5c7282278d869fd9bfef1d362858bd3ea826ac656830e62c1314cc60330"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "88fa5c54f90b2f808535e691bc57b4b1ee40f3adbd54982ce90ed63c0295d54c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "037ca4d0cdfb6f04249765ad7cdb27edaf37db84ab2ebb92b4f3d4bb9ea79677"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "d95b7d0680165834cec92ba66c0210dd561ada90c4fdb991b2a59f987b29ad55"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "ff6b3d5b97b0cda5d61eacfbe6cb17a52144d37b67738d5526aab4a42f9f225c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "ed6fdbda792afd05cadf1ca3b568873c71e62783c22784f0c5f0899a1fdf0563"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "27ae471760c28ceb11a196c98ad79ced053ddbf8859cb26ee7548fa4f16b4a88"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "4ffa00c91977c5feed5cbdfec4ed8ae3fb023dc6e9fa3a305551d963305eb6e5"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1d4ccd63b16a073fcfe758f8063095dbd26b3a43ad7b77ac5b2267d0d6146645"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1826792690ca81c105bedd79f0399033ae3fa434213d764039927b72f981edb7"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "217e0c2a8b24c5045689e1b6753d5f1f6c5348e612f95cc2847e36e52dd114ca"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0f9051c914c9930a582f490d9e4adc573027c9c1259f81976e55914e488e9dd6"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "f1940b07efd0b29304ec439f67d19f187f2252f9f2a11edb8605ec0487f22054"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "c1d09b0e77ea023bfc05e878e1c5f96378b52c91c4fc631b82cf120ac5a238ae"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "bbda6c0422df8e60d3312f6b9ba3020f4bf61e6e33d65bdca62596865f5dc191"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "99f073ec90fa44ed05a386e055a67d4055583e43f876cc0061c75bd9f81cd8f1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "4e8cd4963a814e85b8b7a87a5d5af57fd4e1e0090bf9b71ffdba7b64385982a1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "6c4b104739383f64d792e27a7aabfaebbfab648ac70848d01dfbf4b59da8804b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "903cdad6b010fe8b0a61d4c2b45686740d12c7f5ea1c7d2b8a69637efd2484a1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "53dad1bed33cc28640906f21328a77ff115a24c0796216bc97299aff1e41865d"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "7f53eea7c3bd385d3726b7d80c83fdb5235a60d6154ab98a0a83635cd345f249"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "41fc071f1c195d8dcd919862437e6504426a98448594c32b4eabf060de335457"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "7182caf53f7f1176dc9e6467951f2ccad9a7109b180efa506bb47642b842e383"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "9342b5982ba2b0298026763d29cc3ef4f8aec5a66e8edd34672e4f6ee3305ad1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "a070ca9927ba3e4073ba6fac06bd13fd7f772e3b00acaf99ae466218c837c421"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "4a48a2c967d342b5390e95337a80963daa8265a49389d5efff2d5663ce5b20a4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3dce8cf458e420cc1483bb838c58b053524b6539e9dd10c769530c871f49462b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "f14463fe8b85ff8fac3f41b0af9cbcf34a85d739582c2bbd1c2219fc5e51cc22"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0f71dd4fcb3caa452fa916e9ddb08c779ef132523f2c2a44a4d3c8a385ddc700"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1e56466ed776939e30ce0d5e85b1043c67c759d0d365743f3083d002cedf8475"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5457155e68e73c608515b4f3f879a610f79fe82b924d364a0f862330a4ca5d01"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "19daad56196824107a9620a150260c8e7fd88cedd35365ef81a5a98d9718fc1b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "4b497edefa71ddf28d6c2b418d5800292b6b3882952d61ed9d1ccb42afa7c1b6"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "90751479399d096105e6242c4af49bfa1c022d3a5ebb11601a232485f110715d"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "bae80fee297e60f3be9ba1956f5032a173c9f4a59b2e4ce8444556fb2e65d7e4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "2d79395f95b494f303802e568ccc6720257a7392bedca2b6179ab1b8630787a8"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "554c99cedfe39686fc1f2a7c6de289f9aed95e24905c6f2a318e791e2146935d"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "28cef69dd383abec3438cf6bd22dc36c7eb9ce27a7351d0e993936c0ba26b15a"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "eb83055981d763e7a8e484aa49c748d76d2575f353894ad9375bbf6c75dfc138"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "4192d25333397023c1d6490703afe1828d38645dbe80ed9ec21fe4e3dc6e01fd"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "6542f95811779629313b5f046145e23b49907ae4cfa07ff99462d6e06cfc700a"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "b1e8474e1cf898d26d12ca49a3b3f9fca88e1ff5abdc096c85c2b6660486ee59"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "23f382a0b36062ee3e3a9cfa57a14c07e58686cd9aaa0e9a162642251e80dbb3"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "247580c268b6cfe396c599916fb3974f4730529c4dd083f5e2efe1b9533149e9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5e9a711a893988673875d2c450770fe3ead2546267f6018c94d67786a5214257"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "65328c84b61dec567e259a5612897ada42d3490a8d2e1f8605cdbd253ab56aed"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "e4b08fe0b40f1ad66ab56dcac0a86ebb41085f35fd4e77059a7d0b17d14339ad"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "230f3316fc6d7d8e6e5cdd5f70323417a5868a8e1e5abede7bb7708861170085"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0d471e960e6f4ed4e017fdaa6a22c45ea2626b0b397e3d59c856625ccade2da1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3f0f747d2803168fc1ce869f523bb1a7bdabc84be1d7fae717adcb436dd9ea77"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "30459a89ef8caa74a2130f4bac038be993dd3e6a8879f890995f282321a5d527"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5d5614066f11e3f0dfdf3063e62945fa6224ae6946377ac4aa81070a0fc10ade"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "95c152557dcfacd3b505d3f527326fd102f8e7630ece9a414440b219f7002f72"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "9c9842b625f82875f6827c15381063c8974480a8428817d3d98bd4a272f10b33"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "86d1b8ce94a33ba25f10acad59a260ebad9060d30a93ccb55fe778d95d64b6b9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "9fe3623e45effd769f41881bb58457ff3058d3be12b89b946e712784c150ef8c"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "33ecfd24b36ed072c9cd2c43de21e88783c24576712c551651b78e15f9a355ed"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "5de5454ab449955e417537890300339b6b9157c3c0da7244736f43bbceac27fa"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0d24854ece701f192426470547f7d7e20df7be9f276fdbb1b25ad27db0719f86"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations/DESCRIPTION",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3863da20361a5ebd0166fe8de4872ddddf8f1a46a485cafc5e027d6bc5468df5"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "37fd2e497f368cccb7230646a4f4283713780fab70f02eb9feacca723adcd713"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "05c0442a4d69d05b57e889aed153a7db9ea0131758cbf210dcb6baaab685bdf3"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "9dc4534458e11fa5445d055ad08e9f1b1834f6cdcf35f1e4e4aeeef9657e3b39"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "b3154357734c451ebca69716768f96e3f8ea9fba153adaa4dc4cc1119a41de51"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "40bcc32abface1e76dba300b3bd763cceb5a9bd31a9b0a9dd323d3ff49a0ed4f"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "a2c04d8b23c1830ec804a91d7e43922e0e1c2e4a31d8d60a9337ea45d876abfe"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "bd524472fa716f37abf3830258281489b3ac3fca9421e45e89b79db4fbbb6ce7"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "b5daa507ea641a711cc1dfb2b213dfb28389ecd486c35987c3caf088f3babbb7"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "b04fcb9a8b51a8676c84f157343033804b37c29be6b7936372dcf584e3f060b4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "be8c6780141f93a91a47663b1ea0458a504b7a20413a0be1a79afaa24d7b0df1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "06b2081b8ae8a4578897e686fd15f0a99b1f4ae2a9e2e9c6dcc298775a3e594d"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "95d515f940fc650012a4ddd55a7dfee5064ef529e9c32ea7f65a8c3abaf943b9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/share.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "0d3350121013e15fc1543607f3af82d1b34057fb3bf4c7f8912580a9cc87e300"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/share.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "7fa877cc68a6410f54206ae7c0a9a6bafa8a66f5dd18abe08a922171eec58097"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Bold.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "87cb2d84472a7d66da659ee47b6cdb9552326e8c128245231f191b6ac72529d9"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-BoldItalic.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3d367743f371f28671d2764e911a53d7c20ec9b6aa8791d059e7090389fc52a5"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "678288f868807d4d64a6f3b51466871d117d915780381ce9d0ed4b3bcbd06d37"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "f3961a9cde016d41a4879aecda1474d3a36d6bf54fa0e4643de029cc2248b0e8"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Bold.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1100772b2f79c102402a1011df5e2226517d0f40ac553a25fb12fdbad8c11b85"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Regular.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "87f8ce0522a6c99b743ee5fc75b4073cfdd575639119672828b7b9944b65b4f4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Bold.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "24ad531e6b05ddad8c3d89572d2c93eb86a6b74e652ce7ee3c3e171de68e84c3"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-BoldItalic.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1bc4f86502eaa368718f6192bee022ea9a703d5af1c18b7d291212657b63074a"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Italic.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "c4b3c971741ecdb40f5a443bce754e8fe91efe761b6ea10c92be7c3597cdadc4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Regular.ttf",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "a15cfbbc1539d707115111d672d590a3d70d4f74b4c0a315956da20ae19a14e1"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/gdal.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "edbe02e9726b9df97c074d21c8833400a24cf39c25f4875126ad958ba978e4fa"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/gdal.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "8ae2b5126fff800acc0dce208bd60e9827f2bb4a3f6ef1e26b51a5a697078bbe"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/proj.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "95a64391f05c0254b5b4d70e200d863fc0ba5e819bfff8eae89cc446b790a8e4"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/proj.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "7d4184eb7d16c62656c927f9ee04ffc1e40dc4503e6622aa1c4d4a3a5fac9e5b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/udunits.data.gz",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "2e3de6659d9ec9192fcb669fc39dfb6e37871e705054b21a404571d4301290bb"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/udunits.js.metadata",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "44db361411927a3cd7a703e9451199f780b4dadf42f7d798f20d8e53d2928bd3"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le32d8.cache-9",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "68881241850600c0def90ccf0e69fd0430122889450e7be0aa9cd872a7ac70c2"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/var/cache/fontconfig/CACHEDIR.TAG",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "f6fbc1b264fe758459132824860391ac0da3ad4261064328369be95592cae57b"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/webr-worker.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "434e12ea66cfc92a3b45ca8af59b9fad3a85ba2595fddf8dbab99a49316d43b8"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/webr.mjs",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "1cd2e5403247dcb378c1ce6a0d89b7edda214d3167c07a1d3f611d211d5d47dc"
+    },
+    {
+      "path": "app/shared/alm-validate.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "3de6a685c77fa26d68ae39b1da9619c5ada49fd22ef5170237268e1401a09fb7"
+    },
+    {
+      "path": "app/shared/app-flow.js",
+      "change": "changed",
+      "old_sha256": "733458866c716ed4f3ecefea64e9374c49b12eb33cd56b9ab5ec0e0cf5eb8c77",
+      "sha256": "2b8e366dbdbf5aebffc70f0b25b1ac7a49d65cc4ecfd7c0807113b3b5556162e"
+    },
+    {
+      "path": "app/shared/autosave.js",
+      "change": "changed",
+      "old_sha256": "919165910d2b46a674b5ec1c81c01bce4d3c0779a86232ec032c994274980f1c",
+      "sha256": "18bcc6c10f6177482b2f8453bede3f92887d7e6729413862cc903891405d23e8"
+    },
+    {
+      "path": "app/shared/build-info.js",
+      "change": "changed",
+      "old_sha256": "e627436f2cdebb923349d5d230742b033c69a667726a28af26e0271b52578416",
+      "sha256": "f75a435e283d007883ce8fb2f66da7a1cf6132cd5a391a57419b137a69c9c238"
+    },
+    {
+      "path": "app/shared/canonical-datasets.js",
+      "change": "changed",
+      "old_sha256": "5d0651ca984f16beba1cf761073869986db39c8440a2272729b8edd73f95e764",
+      "sha256": "24bfdb32183dd76ddfc18e02e16292156b4e47e899f3a1c48fb1ba62f963ab28"
+    },
+    {
+      "path": "app/shared/citation.js",
+      "change": "changed",
+      "old_sha256": "a53a0d00d00a3bce289e4972beafb257175f0404782a8ff1f615a047ab5ef07b",
+      "sha256": "0160370671813e2995ff37f68d9b7e7b650f613012fb4208f31e52637cdd3961"
+    },
+    {
+      "path": "app/shared/forced-colors.css",
+      "change": "changed",
+      "old_sha256": "a26b396b0b5b683ea06fca129855e3aba34805348e2d8d4e811ef74b44f5e96e",
+      "sha256": "a967581cb9dfe03bcd6158264353dd8c3fff386d2919143587aa507a24e0c39c"
+    },
+    {
+      "path": "app/shared/hero-examples.js",
+      "change": "changed",
+      "old_sha256": "b4a6cfe9eaafa5781065cc1ac3eb60974c04ec51ac56e3fdf5f2847c3aad55e6",
+      "sha256": "624a76d249eb39f7fe6b1eaef2d82c60e7ee31b0ad456eff2c8292021d6bd3a5"
+    },
+    {
+      "path": "app/shared/location-scale.js",
+      "change": "changed",
+      "old_sha256": "95d4f8f30f87975526fc8622ff4944425fc5e72cb550d4316d7f56507cdc85a1",
+      "sha256": "58837d0badb9028aafa712d19bfef529bcada6b4372ac248cb4cab99e25b75b4"
+    },
+    {
+      "path": "app/shared/ma-core.js",
+      "change": "changed",
+      "old_sha256": "eeaf28c7e1ca1cf91fa2ab050841fd4701f42a2a6b6398fc8f15518c5303793c",
+      "sha256": "fef6ab267ec7fd5582e3431381f090daee11267010effc0858834d9e5fc44bc8"
+    },
+    {
+      "path": "app/shared/ma-studies-v1.js",
+      "change": "changed",
+      "old_sha256": "416fce0f8ec6432e432c050f9bfc9005d74ac5ad389744198d8530ea6096cb11",
+      "sha256": "0710fcb7284e1c837810e4d388d5538836d55483d6b014c6e7f864c44bf26bf6"
+    },
+    {
+      "path": "app/shared/permutest.js",
+      "change": "changed",
+      "old_sha256": "74d90f0e68a4828a8747ec75f834de4a877b9b22b28ac00855ec3285689e01f7",
+      "sha256": "c1bc630a881739bacc00ab2490cd6afc849ccea1355ecf8c125fc60ee55c7e68"
+    },
+    {
+      "path": "app/shared/toast.js",
+      "change": "changed",
+      "old_sha256": "a16ec25ea32b099184047a8b006087e370fcd68e095ed6732852bc0843ba1be6",
+      "sha256": "7562eaca3216ebb3312a42b54af03c3d0030acec22c59976de5537ce3ed11a5b"
+    },
+    {
+      "path": "app/shared/truthcert-export.js",
+      "change": "changed",
+      "old_sha256": "334cd22183ca60f18d8ab17ec335480bd352ea7f581ca89cdfabf5ee14fbf694",
+      "sha256": "d1cc2ff8584d2915bb0414e78e03ab22eccb68e4867a34193fe30ecfe6fdfefc"
+    },
+    {
+      "path": "app/shared/truthcert-ui.js",
+      "change": "changed",
+      "old_sha256": "357c56ebb720e24b0fa63fe4933eb1df111032edf376285980269183c2da2ae7",
+      "sha256": "4326f44530fd523e183a24c5b8bf993b9594d10250ab24a3debc13f4bf251468"
+    },
+    {
+      "path": "app/shared/webr-runner.js",
+      "change": "added",
+      "old_sha256": null,
+      "sha256": "89972c80b2565a13b94f9ed7b9fbf61bec6797203a7e75e63b789dd02c645827"
+    }
+  ],
+  "app_removed": [],
+  "extras_pull_request": 149,
+  "extras_manifest": "validation-plus/MANIFEST-plus.json",
+  "expected_plus_count": 52573,
+  "dependency_edges": [
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/forced-colors.css",
+      "resolution": "HTML link"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/app-style.css",
+      "resolution": "HTML link"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/csv-upload.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/axis-controls.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/results-export.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/url-state.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/reset-undo.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/tooltips.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/ma-core.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/permutest.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/location-scale.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/build-info.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/ma-studies-v1.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/truthcert-export.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/truthcert-ui.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/app-flow.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/canonical-datasets.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/hero-examples.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/citation.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/autosave.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/plot-export.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/analysis-lifecycle.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/toast.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "hub/shared/a11y-landmarks.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/plus.css",
+      "resolution": "HTML link"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/plus-engine.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/validate/contract.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/plus-ui.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "shared/alm-validate.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/validate/plus-pins.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "meta-regression/index.html",
+      "target": "meta-regression/validate/plus-adapter.js",
+      "resolution": "HTML script"
+    },
+    {
+      "source": "hub/shared/plot-export.js",
+      "target": "hub/shared/vendor/jspdf.min.js",
+      "resolution": "new URL: selfScript.src"
+    },
+    {
+      "source": "shared/alm-validate.js",
+      "target": "shared/webr-runner.js",
+      "resolution": "new URL: scriptURL"
+    },
+    {
+      "source": "meta-regression/validate/plus-pins.js",
+      "target": "meta-regression/validate/plus/corpus.json",
+      "resolution": "manifest-driven fetch"
+    },
+    {
+      "source": "meta-regression/validate/plus-pins.js",
+      "target": "meta-regression/validate/plus/reference.json",
+      "resolution": "manifest-driven fetch"
+    },
+    {
+      "source": "meta-regression/validate/plus-pins.js",
+      "target": "meta-regression/validate/plus/candidates.json",
+      "resolution": "manifest-driven fetch"
+    },
+    {
+      "source": "meta-regression/validate/plus-pins.js",
+      "target": "meta-regression/validate/plus/divergences.json",
+      "resolution": "manifest-driven fetch"
+    },
+    {
+      "source": "hub/shared/tooltips.js",
+      "target": "hub/shared/glossary.json",
+      "resolution": "language-select fetch"
+    },
+    {
+      "source": "hub/shared/tooltips.js",
+      "target": "hub/shared/glossary.es.json",
+      "resolution": "language-select fetch"
+    },
+    {
+      "source": "hub/shared/tooltips.js",
+      "target": "hub/shared/glossary.ar.json",
+      "resolution": "language-select fetch"
+    },
+    {
+      "source": "hub/shared/tooltips.js",
+      "target": "hub/shared/glossary.zh.json",
+      "resolution": "language-select fetch"
+    },
+    {
+      "source": "shared/alm-validate.js",
+      "target": "shared/webr-runner.js",
+      "resolution": "lazy script URL"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/webr.mjs",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/webr-worker.js",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/R.js",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/R.wasm",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/library.data.gz",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/library.js.metadata",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/libRblas.so",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/libRlapack.so",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "shared/webr-runner.js",
+      "target": "r-shiny/shinylive/webr/repo/manifest.json",
+      "resolution": "dynamic webR base URL / runtime"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/doc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/doc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations/DESCRIPTION",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/share.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/lib/R/share.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Bold.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-BoldItalic.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Bold.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Regular.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Bold.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-BoldItalic.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Italic.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Regular.ttf",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/gdal.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/gdal.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/proj.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/proj.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/udunits.data.gz",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/usr/share/udunits.js.metadata",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le32d8.cache-9",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/library.js.metadata",
+      "target": "r-shiny/shinylive/webr/vfs/var/cache/fontconfig/CACHEDIR.TAG",
+      "resolution": "webR lazy VFS"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/metafor/metafor_4.8-0.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/Matrix/Matrix_1.7-5.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/lattice/lattice_0.22-9.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/numDeriv/numDeriv_2016.8-1.1.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/nlme/nlme_3.1-169.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/packages/pbapply/pbapply_1.7-4.tgz",
+      "resolution": "metafor transitive package dependency"
+    },
+    {
+      "source": "r-shiny/shinylive/webr/repo/manifest.json",
+      "target": "r-shiny/shinylive/webr/repo/bin/emscripten/contrib/4.5/digest_0.6.39.tgz",
+      "resolution": "metafor transitive package dependency"
+    }
+  ],
+  "webR_scope": "Local webR 0.5.5 runtime, lazy VFS, metafor 4.8-0 and manifest-resolved dependencies; desktop extras use metafor 5.2-1.",
+  "resync": {
+    "source_commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+    "source_commit_evidence": "TASK_resync.md identifies the supplied allmeta checkout; Git not executed in sandbox",
+    "previous_candidate": "d04b0a9",
+    "file_changes": [
+      {
+        "path": "app/shared/alm-validate.js",
+        "source": "shared/alm-validate.js",
+        "before": "3de6a685c77fa26d68ae39b1da9619c5ada49fd22ef5170237268e1401a09fb7",
+        "after": "b451c1377164842466aa0d7ad4cb6dd7a1340456a61e891a01646b4375c4ed87"
+      },
+      {
+        "path": "app/shared/build-info.js",
+        "source": "shared/build-info.js",
+        "before": "f75a435e283d007883ce8fb2f66da7a1cf6132cd5a391a57419b137a69c9c238",
+        "after": "44c8a7d1e2cdad4d4b1c4806cffdd4f9817dc39161cd0de5374761a71bd19177"
+      },
+      {
+        "path": "app/shared/canonical-datasets.js",
+        "source": "shared/canonical-datasets.js",
+        "before": "24bfdb32183dd76ddfc18e02e16292156b4e47e899f3a1c48fb1ba62f963ab28",
+        "after": "32f5b35faff14429602f95a72d79ddc8b6864098e94c652a81cd537579770aca"
+      },
+      {
+        "path": "app/shared/hero-examples.js",
+        "source": "shared/hero-examples.js",
+        "before": "624a76d249eb39f7fe6b1eaef2d82c60e7ee31b0ad456eff2c8292021d6bd3a5",
+        "after": "7b091e4f08184b069b9c649a2cf04f19f440c37bd2de86d49d453f16791307f3"
+      },
+      {
+        "path": "app/hub/shared/results-export.js",
+        "source": "hub/shared/results-export.js",
+        "before": "8fd30b46fc6e0d09b98326f69edf14757659dbcf2cf1434ca8c5de60c057cc71",
+        "after": "16ffa76bc74275565214c2e142d7f0d0847a5a8eded2614efb04aa172acd71f4"
+      }
+    ],
+    "added_files": [],
+    "app_assets_compared": 167,
+    "extras_files_compared": 27,
+    "dependency_audit": "HTML script/link and recursive JS import/fetch/new URL/CSS paths re-parsed; dynamic dependency closure rechecked; no missing files",
+    "historical_app_changes": "app_changes records the first candidate preparation; resync.file_changes records this subsequent transition"
+  },
+  "concept_doi": "10.5281/zenodo.20516880",
+  "release_run": {
+    "date": "2026-10-21",
+    "date_evidence": "TASK_provfix.md (coordinator); log has no independent wall-clock timestamp",
+    "allmeta_commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+    "log": "provenance/run_plan-2026-10-21-release.log",
+    "source_manifest_sha256": "517a936b022343e774f44f8d96f8ee85a3e7e111ba9eb862901647aa8f7cd9e2",
+    "receipts_restamped": false,
+    "log_sha256": "27a4db9d9ebb5dd920b110527715f92aadcbf29b6e3bbf5a24f0054b10a1f3f4",
+    "source_log_sha256": "27a4db9d9ebb5dd920b110527715f92aadcbf29b6e3bbf5a24f0054b10a1f3f4"
+  },
+  "finalize": {
+    "copy_map": "COPY_MAP.json",
+    "copy_destinations": 194,
+    "git_blob_check": "human-runner required; not executed in sandbox",
+    "privacy_status": "blocked: exact-copy and blanket-redaction conflict; see RECUT_NOTES.md",
+    "archive_v1_0_0_doi_status": "not found in supplied or checked public metadata; requested from user",
+    "local_python_tests": {
+      "passed": 64,
+      "r_dependent_deselected": 3
+    },
+    "full_archive_verifier": "sandbox DLL initialization failure; delegated to FINAL_BLOBS.cmd"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "historical_errors": 91,
-  "fresh_errors": 92,
-  "additional_fresh_errors": {
-    "dat.moura2021/e1/ri": "reached elapsed time limit"
-  },
-  "historical_only_errors": {}
-}

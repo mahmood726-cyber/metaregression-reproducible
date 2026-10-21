@@ -5,7 +5,7 @@
       "name": "Ahmad, Mahmood"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "upload_type": "software",
   "access_right": "open",
@@ -19,7 +19,13 @@
       "identifier": "10.5281/zenodo.23288388",
       "relation": "isDerivedFrom",
       "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23515177",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
     }
   ],
-  "description": "Validation of one-numeric-moderator PM meta-regression with floored Knapp–Hartung inference: 129867/129903 non-LS checks pass; 36 documented conditioning differences. Experimental location-scale reported separately."
+  "description": "v1.1.0 release-run evidence dated 2026-10-21 on allmeta v1.8.0 1cb3f8409c7af75ed41f7e1811f9c502f900fc79. Original PM one-moderator validation: 1742/1742 browser configurations identical; 129867/129903 non-LS checks, 36 documented differences and 0 unexpected. PR #149 multiple-moderator ML, likelihood-ratio tests, AIC/BIC and bubble confidence bands: 52573/52573 numerical checks and 52767/52767 browser-panel checks (overlapping totals). Original UI 4/4; safeguards 51/51. Experimental LS remains separate: historical 82680/91515, fresh R 88194/95203. See the preserved release log and RECUT_NOTES.md.",
+  "publication_date": "2026-10-21"
 }

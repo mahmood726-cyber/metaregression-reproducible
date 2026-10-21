@@ -1,0 +1,12 @@
+{
+  "identical_configurations": 1742,
+  "configurations": 1742,
+  "checks": 129903,
+  "passed": 129867,
+  "documented": 36,
+  "unexpected": 0,
+  "LS_checks": 91515,
+  "LS_passed": 82680,
+  "source_manifest_sha256": "7d8f93543a8a5be03ce428c6f0aa60c51c1a4591a11ec843c1f9ed2512d19533",
+  "journal_sha256": "27b490448876406908d23af4028142f23d7b4d464a585a4f94f8bc05c060ee51"
+}
